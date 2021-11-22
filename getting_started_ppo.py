@@ -13,13 +13,13 @@ Here's a bit of code that should help you get started on your projects.
 The cell below installs `procgen` and downloads a small `utils.py` script that contains some utility functions. You may want to inspect the file for more details.
 """
 
-!pip install procgen
-!wget https://raw.githubusercontent.com/nicklashansen/ppo-procgen-utils/main/utils.py
+#!pip install procgen
+#!wget https://raw.githubusercontent.com/nicklashansen/ppo-procgen-utils/main/utils.py
 
 """Hyperparameters. These values should be a good starting point. You can modify them later once you have a working implementation."""
 
 # Hyperparameters
-total_steps = 8e6
+total_steps = 4e6
 num_envs = 32
 num_levels = 10
 num_steps = 256
@@ -29,6 +29,12 @@ eps = .2
 grad_eps = .5
 value_coef = .5
 entropy_coef = .01
+
+feature_dim = 256
+envname = 'coinrun'
+#============================================================================================
+# Define network
+#============================================================================================
 
 """Network definitions. We have defined a policy network for you in advance. It uses the popular `NatureDQN` encoder architecture (see below), while policy and value functions are linear projections from the encodings. There is plenty of opportunity to experiment with architectures, so feel free to do that! Perhaps implement the `Impala` encoder from [this paper](https://arxiv.org/pdf/1802.01561.pdf) (perhaps minus the LSTM)."""
 
@@ -42,33 +48,48 @@ class Flatten(nn.Module):
     def forward(self, x):
         return x.view(x.size(0), -1)
 
-
 class Encoder(nn.Module):
   def __init__(self, in_channels, feature_dim):
     super().__init__()
     self.layers = nn.Sequential(
-        nn.Conv2d(in_channels=in_channels, out_channels=32, kernel_size=8, stride=4), nn.ReLU(),
-        nn.Conv2d(in_channels=32, out_channels=64, kernel_size=4, stride=2), nn.ReLU(),
-        nn.Conv2d(in_channels=64, out_channels=64, kernel_size=3, stride=1), nn.ReLU(),
+        nn.Conv2d(in_channels=in_channels, out_channels=16, kernel_size=8, stride=4), nn.ReLU(),
+        nn.Conv2d(in_channels=16, out_channels=32, kernel_size=4, stride=2), nn.ReLU(),
         Flatten(),
-        nn.Linear(in_features=1024, out_features=feature_dim), nn.ReLU()
+        nn.Linear(in_features=1152, out_features=256), nn.ReLU()
+    )
+    self.LSTM = nn.Sequential(
+        nn.LSTM(input_size=256, hidden_size=256, num_layers=1)
     )
     self.apply(orthogonal_init)
 
   def forward(self, x):
-    return self.layers(x)
+    out=self.layers(x)
+    out = out.view(1,out.shape[0],out.shape[1])
+    out,(h_n, c_n) = self.LSTM(out)
+    #print(out.shape)
+    
+    return out.squeeze(0)
+
 
 
 class Policy(nn.Module):
   def __init__(self, encoder, feature_dim, num_actions):
     super().__init__()
     self.encoder = encoder
-    self.policy = orthogonal_init(nn.Linear(feature_dim, num_actions), gain=.01)
-    self.value = orthogonal_init(nn.Linear(feature_dim, 1), gain=1.)
+    self.policy = nn.Sequential(
+        nn.Linear(feature_dim, 256), nn.ReLU(),
+        nn.Linear(256, 126), nn.ReLU(),
+        nn.Linear(126, num_actions)
+    )
+    self.value = nn.Sequential(
+        nn.Linear(feature_dim, 256), nn.ReLU(),
+        nn.Linear(feature_dim, 1)
+    )
 
   def act(self, x):
     with torch.no_grad():
       x = x.cuda().contiguous()
+      x = x.contiguous()
       dist, value = self.forward(x)
       action = dist.sample()
       log_prob = dist.log_prob(action)
@@ -83,16 +104,22 @@ class Policy(nn.Module):
 
     return dist, value
 
-
+#============================================================================================
 # Define environment
+#============================================================================================
 # check the utils.py file for info on arguments
-env = make_env(num_envs, num_levels=num_levels)
+env = make_env(num_envs, num_levels=num_levels, env_name = envname)
 print('Observation space:', env.observation_space)
 print('Action space:', env.action_space.n)
 
+
+encoder_in = env.observation_space.shape[0]
+num_actions = env.action_space.n
+
+
 # Define network
-encoder = 
-policy = 
+encoder = Encoder(encoder_in,feature_dim)
+policy = Policy(encoder,feature_dim,num_actions)
 policy.cuda()
 
 # Define optimizer
@@ -115,6 +142,8 @@ while step < total_steps:
   # Use policy to collect data for num_steps steps
   policy.eval()
   for _ in range(num_steps):
+    
+
     # Use policy
     action, log_prob, value = policy.act(obs)
     
@@ -148,17 +177,20 @@ while step < total_steps:
       new_log_prob = new_dist.log_prob(b_action)
 
       # Clipped policy objective
-      pi_loss = 
+      ratio = torch.exp((new_log_prob - b_log_prob))
+      surr1 = ratio * b_advantage
+      surr2 = torch.clamp(ratio, 1.0 - eps, 1.0 + eps) * b_advantage
+      pi_loss = - torch.min(surr1, surr2).mean()
 
       # Clipped value function objective
-      value_loss = 
+      value_loss = (b_returns - new_value).pow(2).mean()
 
       # Entropy loss
-      entropy_loss = 
+      entropy_loss = new_dist.entropy()
 
       # Backpropagate losses
-      loss = 
-      loss.backward()
+      loss = torch.mul(value_coef, value_loss) + pi_loss - torch.mul(entropy_coef, entropy_loss)
+      loss.mean().backward()
 
       # Clip gradients
       torch.nn.utils.clip_grad_norm_(policy.parameters(), grad_eps)
@@ -171,8 +203,16 @@ while step < total_steps:
   step += num_envs * num_steps
   print(f'Step: {step}\tMean reward: {storage.get_reward()}')
 
+  if step == 3*num_steps:
+    torch.save(policy.state_dict(), 'checkpoint_intermediate.pt')
+
+
 print('Completed training!')
-torch.save(policy.state_dict, 'checkpoint.pt')
+torch.save(policy.state_dict(), 'checkpoint.pt')
+
+#============================================================================================
+# Test module and create video
+#============================================================================================
 
 """Below cell can be used for policy evaluation and saves an episode to mp4 for you to view."""
 
