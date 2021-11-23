@@ -1,0 +1,7 @@
+{
+    "total_steps":5e6,
+    "learning_rate":5e-5,
+    "epsilon":1e-5,
+    "state_dict_name":"sd5.pt"
+}
+  
