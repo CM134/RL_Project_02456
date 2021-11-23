@@ -265,11 +265,11 @@ while step < total_steps:
   
   cnt_inter = cnt_inter + 1
   if cnt_inter == 1:
-    torch.save(policy.state_dict(), 'inter_' + state_dict_name)
+    torch.save(policy.state_dict(), './state_dicts/inter_' + state_dict_name)
 
 
 print('Completed training!')
-torch.save(policy.state_dict(), state_dict_name)
+torch.save(policy.state_dict(), './state_dicts/' + state_dict_name)
 
 
 #============================================================================================
