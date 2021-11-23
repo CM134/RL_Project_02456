@@ -3,7 +3,7 @@
 ### –- specify queue --
 #BSUB -q gpuv100
 ### -- set the job Name --
-#BSUB -J IMP_L
+#BSUB -J baseline
 ### -- ask for number of cores (default: 1) --
 #BSUB -n 1
 ### -- Select the resources: 1 gpu in exclusive process mode --
@@ -22,14 +22,14 @@
 #BSUB -N
 ### -- Specify the output and error file. %J is the job-id --
 ### -- -o and -e mean append, -oo and -eo mean overwrite --
-#BSUB -o logs/gpu_%J.out
-#BSUB -e logs/gpu_%J.err
+#BSUB -o ~/gpu_%J.out
+#BSUB -e ~/gpu_%J.err
 # -- end of LSF options --
 
 # Load the cuda module
 module load numpy/1.21.1-python-3.8.11-openblas-0.3.17
 module load cuda/10.2
 
-python3 train_IMPALAlarge_config.py config/conf1.json
+python3 train_baseline_config.py config/conf1.json
 
 ## submit by using: bsub < jobscript.sh

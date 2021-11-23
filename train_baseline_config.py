@@ -107,7 +107,7 @@ encoder_in = env.observation_space.shape[0]
 num_actions = env.action_space.n
 
 # Define network
-encoder = ImpalaModel(in_channels=env.observation_space.shape[0], feature_dim=feature_dim)
+encoder = Encoder(in_channels=encoder_in, feature_dim=feature_dim)
 policy = Policy(encoder=encoder, feature_dim=feature_dim, num_actions=env.action_space.n)
 policy.cuda()
 
