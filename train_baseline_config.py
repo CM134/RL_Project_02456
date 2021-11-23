@@ -50,14 +50,6 @@ import torch.nn as nn
 import torch.nn.functional as F
 from utils import make_env, Storage, orthogonal_init
 
-
-def xavier_uniform_init(module, gain=1.0):
-    if isinstance(module, nn.Linear) or isinstance(module, nn.Conv2d):
-        nn.init.xavier_uniform_(module.weight.data, gain)
-        nn.init.constant_(module.bias.data, 0)
-    return module
-
-
 class Flatten(nn.Module):
     def forward(self, x):
         return x.view(x.size(0), -1)
@@ -77,63 +69,6 @@ class Encoder(nn.Module):
 
   def forward(self, x):
     return self.layers(x)
-
-
-# Large IMPALA encoder 
-
-class ResidualBlock(nn.Module):
-  def __init__(self, in_channels):
-    super().__init__()
-    self.conv1 = nn.Conv2d(in_channels=in_channels, out_channels=in_channels, kernel_size=3, stride=1, padding=1)
-    self.conv2 = nn.Conv2d(in_channels=in_channels, out_channels=in_channels, kernel_size=3, stride=1, padding=1)
-
-  def forward(self, x):
-    out = nn.ReLU()(x)
-    out = self.conv1(out)
-    out = nn.ReLU()(out)
-    out = self.conv2(out)
-    return out + x
-
-
-class ImpalaBlock(nn.Module):
-  def __init__(self, in_channels, out_channels):
-    super().__init__()
-    self.conv1 = nn.Conv2d(in_channels=in_channels, out_channels=out_channels, kernel_size=3, stride=1, padding=1)
-    self.res1 = ResidualBlock(out_channels)
-    self.res2 = ResidualBlock(out_channels)
-
-  def forward(self, x):
-    x = self.conv1(x)
-    x = nn.MaxPool2d(kernel_size=3, stride=2, padding=1)(x)
-    x = self.res1(x)
-    x = self.res2(x)
-    return x
-
-
-class ImpalaModel(nn.Module):
-  def __init__(self, in_channels, feature_dim):
-    super().__init__()
-    self.imp1 = ImpalaBlock(in_channels=in_channels, out_channels=16)
-    self.imp2 = ImpalaBlock(in_channels=16, out_channels=32)
-    self.imp3 = ImpalaBlock(in_channels=32, out_channels=32)
-    self.fc1 = nn.Linear(in_features=32*8*8, out_features=feature_dim)
-    self.output_dim = 256
-    self.apply(xavier_uniform_init)
-
-    self.LSTM = nn.Sequential(
-        nn.LSTM(input_size=256, hidden_size=256, num_layers=1))
-
-  def forward(self, x):
-    x = self.imp1(x)
-    x = self.imp2(x)
-    x = self.imp3(x)
-    x = nn.ReLU()(x)
-    x = Flatten()(x)
-    x = self.fc1(x)
-    x = nn.ReLU()(x)
-    x = x.view(1, x.shape[0], x.shape[1])
-    x, (h_n, c_n) = self.LSTM(x)
-    return x.squeeze(0)
 
 
 class Policy(nn.Module):
