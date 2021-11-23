@@ -9,7 +9,11 @@
 ### -- Select the resources: 1 gpu in exclusive process mode --
 #BSUB -gpu "num=1:mode=exclusive_process"
 ### -- set walltime limit: hh:mm --  maximum 24 hours for GPU-queues right now
+<<<<<<< HEAD
 #BSUB -W 5:00
+=======
+#BSUB -W 15:00
+>>>>>>> d122fd15a5d8c62d5ae526f5dec08b0995f03ed0
 # request GB of system-memory
 #BSUB -R "rusage[mem=16GB]"
 ### -- set the email address --
@@ -30,6 +34,13 @@
 module load numpy/1.21.1-python-3.8.11-openblas-0.3.17
 module load cuda/10.2
 
+<<<<<<< HEAD
 python3 train_config.py config/conf5.json
+=======
+python3 train_config.py config/conf1.json
+python3 train_config.py config/conf2.json
+python3 train_config.py config/conf3.json
+python3 train_config.py config/conf4.json
+>>>>>>> d122fd15a5d8c62d5ae526f5dec08b0995f03ed0
 
 ## submit by using: bsub < jobscript.sh
