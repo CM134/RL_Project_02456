@@ -313,7 +313,7 @@ if __name__ == "__main__":
     
     cnt_inter = cnt_inter + 1
     if cnt_inter == 1:
-      torch.save(policy.state_dict(), './state_dicts/inter_' + state_dict_name)
+      torch.save(policy.state_dict(), './state_dicts/intermediate/inter_' + state_dict_name)
 
 
   print('Completed training!')

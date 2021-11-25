@@ -3,15 +3,15 @@
 ### –- specify queue --
 #BSUB -q gpuv100
 ### -- set the job Name --
-#BSUB -J test
+#BSUB -J 2_IMPlarge
 ### -- ask for number of cores (default: 1) --
 #BSUB -n 1
 ### -- Select the resources: 1 gpu in exclusive process mode --
 #BSUB -gpu "num=1:mode=exclusive_process"
 ### -- set walltime limit: hh:mm --  maximum 24 hours for GPU-queues right now
-#BSUB -W 5:00
+#BSUB -W 10:00
 # request GB of system-memory
-#BSUB -R "rusage[mem=16GB]"
+#BSUB -R "rusage[mem=10GB]"
 ### -- set the email address --
 # please uncomment the following line and put in your e-mail address,
 # if you want to receive e-mail notifications on a non-default address
@@ -30,6 +30,7 @@
 module load numpy/1.21.1-python-3.8.11-openblas-0.3.17
 module load cuda/10.2
 
-python3 train_IMPALAshort_config.py config/conf1.json 1
+python3 train_IMPALAlarge_config.py config/conf_IMPlarge.json 1
+python3 train_IMPALAlarge_config.py config/conf_IMPlarge.json 2
 
 ## submit by using: bsub < jobscript.sh
