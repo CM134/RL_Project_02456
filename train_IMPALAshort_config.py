@@ -39,6 +39,7 @@ entropy_coef = .01
 
 feature_dim = 256
 envname = 'coinrun'
+
 #============================================================================================
 # Define network
 #============================================================================================
@@ -51,89 +52,32 @@ import torch.nn.functional as F
 from utils import make_env, Storage, orthogonal_init
 
 
-def xavier_uniform_init(module, gain=1.0):
-    if isinstance(module, nn.Linear) or isinstance(module, nn.Conv2d):
-        nn.init.xavier_uniform_(module.weight.data, gain)
-        nn.init.constant_(module.bias.data, 0)
-    return module
-
-
 class Flatten(nn.Module):
     def forward(self, x):
         return x.view(x.size(0), -1)
-
 
 class Encoder(nn.Module):
   def __init__(self, in_channels, feature_dim):
     super().__init__()
     self.layers = nn.Sequential(
-        nn.Conv2d(in_channels=in_channels, out_channels=32, kernel_size=8, stride=4), nn.ReLU(),
-        nn.Conv2d(in_channels=32, out_channels=64, kernel_size=4, stride=2), nn.ReLU(),
-        nn.Conv2d(in_channels=64, out_channels=64, kernel_size=3, stride=1), nn.ReLU(),
+        nn.Conv2d(in_channels=in_channels, out_channels=16, kernel_size=8, stride=4), nn.ReLU(),
+        nn.Conv2d(in_channels=16, out_channels=32, kernel_size=4, stride=2), nn.ReLU(),
         Flatten(),
-        nn.Linear(in_features=1024, out_features=feature_dim), nn.ReLU()
+        nn.Linear(in_features=1152, out_features=256), nn.ReLU()
+    )
+    self.LSTM = nn.Sequential(
+        nn.LSTM(input_size=256, hidden_size=256, num_layers=1)
     )
     self.apply(orthogonal_init)
 
   def forward(self, x):
-    return self.layers(x)
+    out=self.layers(x)
+    out = out.view(1,out.shape[0],out.shape[1])
+    out,(h_n, c_n) = self.LSTM(out)
+    #print(out.shape)
+    
+    return out.squeeze(0)
 
-
-# Large IMPALA encoder 
-
-class ResidualBlock(nn.Module):
-  def __init__(self, in_channels):
-    super().__init__()
-    self.conv1 = nn.Conv2d(in_channels=in_channels, out_channels=in_channels, kernel_size=3, stride=1, padding=1)
-    self.conv2 = nn.Conv2d(in_channels=in_channels, out_channels=in_channels, kernel_size=3, stride=1, padding=1)
-
-  def forward(self, x):
-    out = nn.ReLU()(x)
-    out = self.conv1(out)
-    out = nn.ReLU()(out)
-    out = self.conv2(out)
-    return out + x
-
-
-class ImpalaBlock(nn.Module):
-  def __init__(self, in_channels, out_channels):
-    super().__init__()
-    self.conv1 = nn.Conv2d(in_channels=in_channels, out_channels=out_channels, kernel_size=3, stride=1, padding=1)
-    self.res1 = ResidualBlock(out_channels)
-    self.res2 = ResidualBlock(out_channels)
-
-  def forward(self, x):
-    x = self.conv1(x)
-    x = nn.MaxPool2d(kernel_size=3, stride=2, padding=1)(x)
-    x = self.res1(x)
-    x = self.res2(x)
-    return x
-
-
-class ImpalaModel(nn.Module):
-  def __init__(self, in_channels, feature_dim):
-    super().__init__()
-    self.imp1 = ImpalaBlock(in_channels=in_channels, out_channels=16)
-    self.imp2 = ImpalaBlock(in_channels=16, out_channels=32)
-    self.imp3 = ImpalaBlock(in_channels=32, out_channels=32)
-    self.fc1 = nn.Linear(in_features=32*8*8, out_features=feature_dim)
-    self.output_dim = 256
-    self.apply(xavier_uniform_init)
-
-    self.LSTM = nn.Sequential(
-        nn.LSTM(input_size=256, hidden_size=256, num_layers=1))
-
-  def forward(self, x):
-    x = self.imp1(x)
-    x = self.imp2(x)
-    x = self.imp3(x)
-    x = nn.ReLU()(x)
-    x = Flatten()(x)
-    x = self.fc1(x)
-    x = nn.ReLU()(x)
-    x = x.view(1, x.shape[0], x.shape[1])
-    x, (h_n, c_n) = self.LSTM(x)
-    return x.squeeze(0)
 
 
 class Policy(nn.Module):
@@ -146,6 +90,7 @@ class Policy(nn.Module):
   def act(self, x):
     with torch.no_grad():
       x = x.cuda().contiguous()
+      x = x.contiguous()
       dist, value = self.forward(x)
       action = dist.sample()
       log_prob = dist.log_prob(action)
@@ -172,8 +117,8 @@ encoder_in = env.observation_space.shape[0]
 num_actions = env.action_space.n
 
 # Define network
-encoder = ImpalaModel(in_channels=env.observation_space.shape[0], feature_dim=feature_dim)
-policy = Policy(encoder=encoder, feature_dim=feature_dim, num_actions=env.action_space.n)
+encoder = Encoder(encoder_in,feature_dim)
+policy = Policy(encoder,feature_dim,num_actions)
 policy.cuda()
 
 # Define optimizer

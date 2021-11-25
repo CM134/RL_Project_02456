@@ -3,13 +3,13 @@
 ### –- specify queue --
 #BSUB -q gpuv100
 ### -- set the job Name --
-#BSUB -J IMP_L
+#BSUB -J IMP_short
 ### -- ask for number of cores (default: 1) --
 #BSUB -n 1
 ### -- Select the resources: 1 gpu in exclusive process mode --
 #BSUB -gpu "num=1:mode=exclusive_process"
 ### -- set walltime limit: hh:mm --  maximum 24 hours for GPU-queues right now
-#BSUB -W 15:00
+#BSUB -W 5:00
 # request GB of system-memory
 #BSUB -R "rusage[mem=16GB]"
 ### -- set the email address --
