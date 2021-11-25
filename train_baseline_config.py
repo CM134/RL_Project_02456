@@ -8,7 +8,12 @@ import sys
 import json
 
 try:
+  num = str(sys.argv[2]) # number to set behind names to indicate which run it is we run it 
+except:
+  num = None
+try:
     inFile = sys.argv[1]
+    
     f = open(inFile)
     data = json.load(f)
     print(data)
@@ -26,6 +31,11 @@ except:
     epsilon = 1e-5
     state_dict_name = 'check.pt'
     outfile_name = 'bl'
+    
+if num is not None:
+  state_dict_name = num + '_' + state_dict_name
+  outfile_name = num + '_' + outfile_name 
+  
     
 num_envs = 32
 num_levels = 100
