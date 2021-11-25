@@ -31,6 +31,8 @@ for fname in filenames:
                 name.append('baseline')
             elif (fname.find('policy') != -1):
                 name.append('IMPALA + 3-layered Policy')
+            elif (fname.find('short') != -1):
+                name.append('IMPALA')
             
         elif (fname.find('success_rate')):
             rate_eval.append(np.loadtxt(fname, dtype=float))
@@ -49,7 +51,7 @@ for fname in filenames:
 import matplotlib.pyplot as plt
 # if we have several runs we could do the following: https://stackoverflow.com/questions/12957582/plot-yerr-xerr-as-shaded-region-rather-than-error-bars
 
-clr = ['orange','steelblue','mediumseagreen']
+clr = ['orange','steelblue','mediumseagreen','crimson']
 plt.figure()
 for i in range(len(steps)):
     plt.plot(steps[i], rate_eval[i] , clr[i])
