@@ -1,0 +1,18 @@
+Loaded dependency [numpy/1.21.1-python-3.8.11-openblas-0.3.17]: openblas/0.3.17
+Loaded dependency [python3/3.8.11]: gcc/10.3.0-binutils-2.36.1
+Loaded dependency [numpy/1.21.1-python-3.8.11-openblas-0.3.17]: python3/3.8.11
+Loaded module: numpy/1.21.1-python-3.8.11-openblas-0.3.17
+
+Loading numpy/1.21.1-python-3.8.11-openblas-0.3.17
+  Loading requirement: openblas/0.3.17 gcc/10.3.0-binutils-2.36.1 python3/3.8.11
+Loaded module: cuda/10.2
+Traceback (most recent call last):
+  File "train_IMPALAshort_config.py", line 265, in <module>
+    torch.save(policy.state_dict(), './state_dicts/inter_' + state_dict_name)
+  File "/zhome/0c/3/149896/.local/lib/python3.8/site-packages/torch/serialization.py", line 376, in save
+    with _open_file_like(f, 'wb') as opened_file:
+  File "/zhome/0c/3/149896/.local/lib/python3.8/site-packages/torch/serialization.py", line 230, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "/zhome/0c/3/149896/.local/lib/python3.8/site-packages/torch/serialization.py", line 211, in __init__
+    super(_open_file, self).__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: './state_dicts/inter_IMP_short_std.pt'

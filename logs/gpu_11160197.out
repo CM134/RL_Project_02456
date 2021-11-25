@@ -1,0 +1,7 @@
+{'total_steps': 2500000.0, 'learning_rate': 0.0005, 'epsilon': 1e-05, 'state_dict_name': 'IMP_short_std'}
+Start Training...
+Step: 8192
+Mean test reward: 0.625
+Mean eval reward: 1.5625
+Successful test levels: 50.0 %
+Successful eval levels: 38.46153846153847 %

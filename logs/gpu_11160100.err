@@ -1,0 +1,28 @@
+Loaded dependency [numpy/1.21.1-python-3.8.11-openblas-0.3.17]: openblas/0.3.17
+Loaded dependency [python3/3.8.11]: gcc/10.3.0-binutils-2.36.1
+Loaded dependency [numpy/1.21.1-python-3.8.11-openblas-0.3.17]: python3/3.8.11
+Loaded module: numpy/1.21.1-python-3.8.11-openblas-0.3.17
+
+Loading numpy/1.21.1-python-3.8.11-openblas-0.3.17
+  Loading requirement: openblas/0.3.17 gcc/10.3.0-binutils-2.36.1 python3/3.8.11
+Loaded module: cuda/10.2
+Traceback (most recent call last):
+  File "train_IMPALAlarge_config.py", line 249, in <module>
+    eval_obs, reward, done, info = eval_env.step(action)
+  File "/zhome/0c/3/149896/cm_Workspace/utils.py", line 257, in step
+    return self.step_wait()
+  File "/zhome/0c/3/149896/cm_Workspace/utils.py", line 530, in step_wait
+    obs, reward, done, info = self.venv.step_wait()
+  File "/zhome/0c/3/149896/cm_Workspace/utils.py", line 512, in step_wait
+    obs, reward, done, info = self.venv.step_wait()
+  File "/zhome/0c/3/149896/cm_Workspace/utils.py", line 497, in step_wait
+    obs, reward, done, info = self.venv.step_wait()
+  File "/zhome/0c/3/149896/cm_Workspace/utils.py", line 465, in step_wait
+    obs, rews, news, infos = self.venv.step_wait()
+  File "/zhome/0c/3/149896/cm_Workspace/utils.py", line 338, in step_wait
+    obs, rews, dones, infos = self.venv.step_wait()
+  File "/zhome/0c/3/149896/.local/lib/python3.8/site-packages/gym3/interop.py", line 323, in step_wait
+    rew, ob, first = self.env.observe()
+  File "/zhome/0c/3/149896/.local/lib/python3.8/site-packages/gym3/libenv.py", line 345, in observe
+    self._c_lib.libenv_observe(self._c_env)
+KeyboardInterrupt
