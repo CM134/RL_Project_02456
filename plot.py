@@ -12,38 +12,97 @@ from numpy.lib.function_base import append
 filenames = sorted(glob.glob("./scores/*"))
 
 
-rew_eval = []
-rew_test = []
-rate_eval = []
-rate_test = []
+PolicyDe_rew_eval = []
+IMPlarge_rew_eval = []
+IMPshort_rew_eval = []
+baseline_rew_eval = []
+
+PolicyDe_rew_test = []
+IMPlarge_rew_test = []
+IMPshort_rew_test = []
+baseline_rew_test = []
+
+PolicyDe_rate_eval = []
+IMPlarge_rate_eval = []
+IMPshort_rate_eval = []
+baseline_rate_eval = []
+
+PolicyDe_rate_test = []
+IMPlarge_rate_test = []
+IMPshort_rate_test = []
+baseline_rate_test = []
+
 steps = []
 name = []
 
 
 for fname in filenames:
-    if (fname.find('eval') != -1):
-        if (fname.find('reward') != -1):
-            rew_eval.append(np.loadtxt(fname, dtype=float))
-            # just do this name filling in one of the cases
-            if (fname.find('large') != -1):
-                name.append('IMPALA-large')
-            elif (fname.find('baseline') != -1):
-                name.append('baseline')
-            elif (fname.find('policy') != -1):
-                name.append('IMPALA + 3-layered Policy')
-            elif (fname.find('short') != -1):
-                name.append('IMPALA')
-            
-        elif (fname.find('success_rate')):
-            rate_eval.append(np.loadtxt(fname, dtype=float))
-    elif (fname.find('test')) != -1:
-        if (fname.find('reward') != -1):
-            rew_test.append(np.loadtxt(fname, dtype=float))
-        elif (fname.find('success_rate')):
-            rate_test.append(np.loadtxt(fname, dtype=float))
-    else:
-        steps.append(np.loadtxt(fname, dtype=float))
+    data = np.loadtxt(fname, dtype=float)
+    if (fname.find('large') != -1):
+        if (fname.find('eval') != -1):
+            if (fname.find('reward') != -1):
+                IMPlarge_rew_eval.append(data)
+            elif (fname.find('success_rate')):
+                IMPlarge_rate_eval.appen(data)
+        elif (fname.find('test')) != -1:
+            if (fname.find('reward') != -1):
+                IMPlarge_rew_test.append(data)
+            elif (fname.find('success_rate')):
+                IMPlarge_rate_test.append(data)
 
+    elif (fname.find('baseline') != -1):
+        if (fname.find('eval') != -1):
+            if (fname.find('reward') != -1):
+                baseline_rew_eval.append(data)
+            elif (fname.find('success_rate')):
+                baseline_rate_eval.append(data)
+        elif (fname.find('test')) != -1:
+            if (fname.find('reward') != -1):
+                baseline_rew_test.append(data)
+            elif (fname.find('success_rate')):
+                baseline_rate_test.append(data)
+
+    elif (fname.find('policy') != -1):
+        if (fname.find('eval') != -1):
+            if (fname.find('reward') != -1):
+                PolicyDe_rew_eval.append(data)            
+            elif (fname.find('success_rate')):
+                PolicyDe_rate_eval.append(data)
+        elif (fname.find('test')) != -1:
+            if (fname.find('reward') != -1):
+                PolicyDe_rew_test.append(data)
+            elif (fname.find('success_rate')):
+                PolicyDe_rate_test.append(data)
+
+    elif (fname.find('short') != -1):
+        if (fname.find('eval') != -1):
+            if (fname.find('reward') != -1):
+                IMPshort_rew_eval.append(data)
+            elif (fname.find('success_rate')):
+                IMPshort_rate_eval.append(data)
+        elif (fname.find('test')) != -1:
+            if (fname.find('reward') != -1):
+                IMPshort_rew_test.append(data)
+            elif (fname.find('success_rate')):
+                IMPshort_rate_test.append(data)
+
+
+PolicyDe_rew_eval =  np.mean(np.array(PolicyDe_rew_eval ), axis = 1)
+IMPlarge_rew_eval =  np.mean(np.array(IMPlarge_rew_eval ), axis = 1)
+IMPshort_rew_eval =  np.mean(np.array(IMPshort_rew_eval ), axis = 1)
+baseline_rew_eval =  np.mean(np.array(baseline_rew_eval ), axis = 1)
+PolicyDe_rew_test =  np.mean(np.array(PolicyDe_rew_test ), axis = 1)
+IMPlarge_rew_test =  np.mean(np.array(IMPlarge_rew_test ), axis = 1)
+IMPshort_rew_test =  np.mean(np.array(IMPshort_rew_test ), axis = 1)
+baseline_rew_test =  np.mean(np.array(baseline_rew_test ), axis = 1)
+PolicyDe_rate_eval = np.mean(np.array(PolicyDe_rate_eval), axis = 1)
+IMPlarge_rate_eval = np.mean(np.array(IMPlarge_rate_eval), axis = 1)
+IMPshort_rate_eval = np.mean(np.array(IMPshort_rate_eval), axis = 1)
+baseline_rate_eval = np.mean(np.array(baseline_rate_eval), axis = 1)
+PolicyDe_rate_test = np.mean(np.array(PolicyDe_rate_test), axis = 1)
+IMPlarge_rate_test = np.mean(np.array(IMPlarge_rate_test), axis = 1)
+IMPshort_rate_test = np.mean(np.array(IMPshort_rate_test), axis = 1)
+baseline_rate_test = np.mean(np.array(baseline_rate_test), axis = 1)
     
         
 
