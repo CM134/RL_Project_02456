@@ -91,7 +91,22 @@ for fname in filenames:
         elif (fname.find('step') != -1):
             steps = data # always the same just overwrite
         
-
+std_PolicyDe_rew_eval =  np.std(np.array(PolicyDe_rew_eval ), axis = 0)
+std_IMPlarge_rew_eval =  np.std(np.array(IMPlarge_rew_eval ), axis = 0)
+std_IMPshort_rew_eval =  np.std(np.array(IMPshort_rew_eval ), axis = 0)
+std_baseline_rew_eval =  np.std(np.array(baseline_rew_eval ), axis = 0)
+std_PolicyDe_rew_test =  np.std(np.array(PolicyDe_rew_test ), axis = 0)
+std_IMPlarge_rew_test =  np.std(np.array(IMPlarge_rew_test ), axis = 0)
+std_IMPshort_rew_test =  np.std(np.array(IMPshort_rew_test ), axis = 0)
+std_baseline_rew_test =  np.std(np.array(baseline_rew_test ), axis = 0)
+std_PolicyDe_rate_eval = np.std(np.array(PolicyDe_rate_eval), axis = 0)
+std_IMPlarge_rate_eval = np.std(np.array(IMPlarge_rate_eval), axis = 0)
+std_IMPshort_rate_eval = np.std(np.array(IMPshort_rate_eval), axis = 0)
+std_baseline_rate_eval = np.std(np.array(baseline_rate_eval), axis = 0)
+std_PolicyDe_rate_test = np.std(np.array(PolicyDe_rate_test), axis = 0)
+std_IMPlarge_rate_test = np.std(np.array(IMPlarge_rate_test), axis = 0)
+std_IMPshort_rate_test = np.std(np.array(IMPshort_rate_test), axis = 0)
+std_baseline_rate_test = np.std(np.array(baseline_rate_test), axis = 0)
 
 PolicyDe_rew_eval =  np.mean(np.array(PolicyDe_rew_eval ), axis = 0)
 IMPlarge_rew_eval =  np.mean(np.array(IMPlarge_rew_eval ), axis = 0)
@@ -110,8 +125,15 @@ IMPlarge_rate_test = np.mean(np.array(IMPlarge_rate_test), axis = 0)
 IMPshort_rate_test = np.mean(np.array(IMPshort_rate_test), axis = 0)
 baseline_rate_test = np.mean(np.array(baseline_rate_test), axis = 0)
 
+
+
+
 rate_eval = [PolicyDe_rate_eval, IMPlarge_rate_eval, IMPshort_rate_eval, baseline_rate_eval]
 rate_test = [PolicyDe_rate_test, IMPlarge_rate_test, IMPshort_rate_test, baseline_rate_test]
+
+rew_eval = [PolicyDe_rew_eval, IMPlarge_rew_eval, IMPshort_rew_eval, baseline_rew_eval]
+rew_test = [PolicyDe_rew_test, IMPlarge_rew_test, IMPshort_rew_test, baseline_rew_test]
+
 
 name = ['IMPALA+3-Layered Policy', 'IMPALA-LARGE', 'IMPALA', 'Baseline']
 
@@ -132,4 +154,17 @@ plt.grid(True)
 plt.xlim([0,2.5e6])
 plt.show()
 
+
+clr = ['orange','steelblue','mediumseagreen','crimson']
+plt.figure()
+for i in range(len(rew_eval)):
+    plt.plot(steps, rew_eval[i] , clr[i])
+
+plt.legend(name)
+# clr = ['orange','steelblue','mediumseagreen','crimson']
+for i in range(len(rew_test)):
+    plt.plot(steps, rew_test[i], color=clr[i], linestyle='--')
+plt.grid(True)
+plt.xlim([0,2.5e6])
+plt.show()
 
