@@ -34,9 +34,9 @@ name = []
 
 for fname in filenames:
     data = np.loadtxt(fname, dtype=float)
+    # one data set is trained on 5e6 steps. Meaning fails if different length
     if len(data) > 306:
         data = data[:306]
-
     if (fname.find('large') != -1):
         if (fname.find('eval') != -1):
             if (fname.find('reward') != -1):
@@ -103,8 +103,25 @@ IMPlarge_rate_test = np.mean(np.array(IMPlarge_rate_test), axis = 0)
 IMPshort_rate_test = np.mean(np.array(IMPshort_rate_test), axis = 0)
 baseline_rate_test = np.mean(np.array(baseline_rate_test), axis = 0)
 
-    
-        
+PolicyDe_rew_eval =  np.mean(np.array(PolicyDe_rew_eval ), axis = 0)
+IMPlarge_rew_eval =  np.mean(np.array(IMPlarge_rew_eval ), axis = 0)
+IMPshort_rew_eval =  np.mean(np.array(IMPshort_rew_eval ), axis = 0)
+baseline_rew_eval =  np.mean(np.array(baseline_rew_eval ), axis = 0)
+PolicyDe_rew_test =  np.mean(np.array(PolicyDe_rew_test ), axis = 0)
+IMPlarge_rew_test =  np.mean(np.array(IMPlarge_rew_test ), axis = 0)
+IMPshort_rew_test =  np.mean(np.array(IMPshort_rew_test ), axis = 0)
+baseline_rew_test =  np.mean(np.array(baseline_rew_test ), axis = 0)
+PolicyDe_rate_eval = np.mean(np.array(PolicyDe_rate_eval), axis = 0)
+IMPlarge_rate_eval = np.mean(np.array(IMPlarge_rate_eval), axis = 0)
+IMPshort_rate_eval = np.mean(np.array(IMPshort_rate_eval), axis = 0)
+baseline_rate_eval = np.mean(np.array(baseline_rate_eval), axis = 0)
+PolicyDe_rate_test = np.mean(np.array(PolicyDe_rate_test), axis = 0)
+IMPlarge_rate_test = np.mean(np.array(IMPlarge_rate_test), axis = 0)
+IMPshort_rate_test = np.mean(np.array(IMPshort_rate_test), axis = 0)
+baseline_rate_test = np.mean(np.array(baseline_rate_test), axis = 0)
+
+rate_eval = [PolicyDe_rate_eval, IMPlarge_rate_eval, IMPshort_rate_eval, baseline_rate_eval]
+rate_test = [PolicyDe_rate_test, IMPlarge_rate_test, IMPshort_rate_test, baseline_rate_test]
 
 #%% Plot
 # =============================================================================
