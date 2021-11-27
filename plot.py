@@ -46,7 +46,7 @@ for fname in filenames:
             if (fname.find('reward') != -1):
                 IMPlarge_rew_eval.append(data)
             elif (fname.find('success_rate')):
-                IMPlarge_rate_eval.appen(data)
+                IMPlarge_rate_eval.append(data)
         elif (fname.find('test')) != -1:
             if (fname.find('reward') != -1):
                 IMPlarge_rew_test.append(data)
@@ -88,6 +88,9 @@ for fname in filenames:
                 IMPshort_rew_test.append(data)
             elif (fname.find('success_rate')):
                 IMPshort_rate_test.append(data)
+        elif (fname.find('step') != -1):
+            steps = data # always the same just overwrite
+        
 
 
 PolicyDe_rew_eval =  np.mean(np.array(PolicyDe_rew_eval ), axis = 0)
@@ -110,19 +113,21 @@ baseline_rate_test = np.mean(np.array(baseline_rate_test), axis = 0)
 rate_eval = [PolicyDe_rate_eval, IMPlarge_rate_eval, IMPshort_rate_eval, baseline_rate_eval]
 rate_test = [PolicyDe_rate_test, IMPlarge_rate_test, IMPshort_rate_test, baseline_rate_test]
 
+name = ['IMPALA+3-Layered Policy', 'IMPALA-LARGE', 'IMPALA', 'Baseline']
+
 #%% Plot
 import matplotlib.pyplot as plt
 # if we have several runs we could do the following: https://stackoverflow.com/questions/12957582/plot-yerr-xerr-as-shaded-region-rather-than-error-bars
 
 clr = ['orange','steelblue','mediumseagreen','crimson']
 plt.figure()
-for i in range(len(steps)):
-    plt.plot(steps[i], rate_eval[i] , clr[i])
+for i in range(len(rate_eval)):
+    plt.plot(steps, rate_eval[i] , clr[i])
 
 plt.legend(name)
-# clr = ['darkorange','steelblue','seagreen']
-for i in range(len(steps)):
-    plt.plot(steps[i], rate_test[i], color=clr[i], linestyle='--')
+# clr = ['orange','steelblue','mediumseagreen','crimson']
+for i in range(len(rate_test)):
+    plt.plot(steps, rate_test[i], color=clr[i], linestyle='--')
 plt.grid(True)
 plt.xlim([0,2.5e6])
 plt.show()
