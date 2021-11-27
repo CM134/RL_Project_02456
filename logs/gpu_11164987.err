@@ -1,0 +1,8 @@
+Loaded dependency [numpy/1.21.1-python-3.8.11-openblas-0.3.17]: openblas/0.3.17
+Loaded dependency [python3/3.8.11]: gcc/10.3.0-binutils-2.36.1
+Loaded dependency [numpy/1.21.1-python-3.8.11-openblas-0.3.17]: python3/3.8.11
+Loaded module: numpy/1.21.1-python-3.8.11-openblas-0.3.17
+
+Loading numpy/1.21.1-python-3.8.11-openblas-0.3.17
+  Loading requirement: openblas/0.3.17 gcc/10.3.0-binutils-2.36.1 python3/3.8.11
+Loaded module: cuda/10.2

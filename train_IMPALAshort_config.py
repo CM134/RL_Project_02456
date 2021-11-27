@@ -6,14 +6,15 @@
 
 import sys
 import json
+import numpy as np
 
 try:
   num = str(sys.argv[2]) # number to set behind names to indicate which run it is we run it 
 except:
   num = None
+
 try:
     inFile = sys.argv[1]
-    
     f = open(inFile)
     data = json.load(f)
     print(data)
@@ -22,15 +23,22 @@ try:
     epsilon = data["epsilon"]
     state_dict_name = data["state_dict_name"]+'.pt'
     outfile_name = data["state_dict_name"]
-    
 
-except:
+    if data["seed"] == "random":
+      seed = np.random.randint(low=0,high=100)
+    else:
+      seed = int(data["seed"])
+    
+except Exception as e:
+    print('Error: ', e)
     print('loading form config failed: using default')
     total_steps = 21e3
     learning_rate = 5e-4
     epsilon = 1e-5
     state_dict_name = 'check.pt'
     outfile_name = 'bl'
+    seed = 0
+
     
 if num is not None:
   state_dict_name = num + '_' + state_dict_name
@@ -123,8 +131,8 @@ if __name__ == "__main__":
   #-------------------------------------------------------------------------------------------
   # Define environment
   #-------------------------------------------------------------------------------------------
-  env      = make_env(n_envs=num_envs, num_levels=num_levels,   env_name = envname, seed = 0, start_level=0)
-  eval_env = make_env(n_envs=num_envs, num_levels=num_levels, env_name = envname, seed = 0, start_level=num_levels)
+  env      = make_env(n_envs=num_envs, num_levels=num_levels,   env_name = envname, seed = seed, start_level=0)
+  eval_env = make_env(n_envs=num_envs, num_levels=num_levels, env_name = envname, seed = seed, start_level=num_levels)
 
   encoder_in = env.observation_space.shape[0]
   num_actions = env.action_space.n

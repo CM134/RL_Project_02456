@@ -2,6 +2,7 @@
     "total_steps":2.5e6,
     "learning_rate":5e-4,
     "epsilon":1e-5,
-    "state_dict_name":"policy_d" 
+    "state_dict_name":"policy_d",
+    "seed": "random"
 }
   
