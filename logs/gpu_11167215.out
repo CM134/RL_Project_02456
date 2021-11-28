@@ -1,0 +1,1533 @@
+{'total_steps': 2500000.0, 'learning_rate': 0.0005, 'epsilon': 1e-05, 'state_dict_name': 'STEPS_500_IMP_large', 'seed': 0, 'levels': 500}
+Start Training...
+Step: 8192
+Mean test reward: 0.625
+Mean eval reward: 1.25
+Successful test levels: 20.0 %
+Successful eval levels: 40.0 %
+Step: 16384
+Mean test reward: 2.5
+Mean eval reward: 0.625
+Successful test levels: 61.53846153846154 %
+Successful eval levels: 22.22222222222222 %
+Step: 24576
+Mean test reward: 2.1875
+Mean eval reward: 1.875
+Successful test levels: 43.75 %
+Successful eval levels: 40.0 %
+Step: 32768
+Mean test reward: 5.3125
+Mean eval reward: 0.9375
+Successful test levels: 53.125 %
+Successful eval levels: 13.043478260869565 %
+Step: 40960
+Mean test reward: 7.5
+Mean eval reward: 7.1875
+Successful test levels: 53.333333333333336 %
+Successful eval levels: 45.09803921568628 %
+Step: 49152
+Mean test reward: 5.3125
+Mean eval reward: 9.0625
+Successful test levels: 34.69387755102041 %
+Successful eval levels: 49.152542372881356 %
+Step: 57344
+Mean test reward: 9.6875
+Mean eval reward: 9.0625
+Successful test levels: 49.2063492063492 %
+Successful eval levels: 47.540983606557376 %
+Step: 65536
+Mean test reward: 12.1875
+Mean eval reward: 13.4375
+Successful test levels: 54.929577464788736 %
+Successful eval levels: 47.25274725274725 %
+Step: 73728
+Mean test reward: 14.6875
+Mean eval reward: 13.4375
+Successful test levels: 50.53763440860215 %
+Successful eval levels: 53.086419753086425 %
+Step: 81920
+Mean test reward: 15.3125
+Mean eval reward: 14.6875
+Successful test levels: 52.68817204301075 %
+Successful eval levels: 52.80898876404494 %
+Step: 90112
+Mean test reward: 18.75
+Mean eval reward: 19.375
+Successful test levels: 56.60377358490566 %
+Successful eval levels: 53.91304347826087 %
+Step: 98304
+Mean test reward: 17.5
+Mean eval reward: 20.9375
+Successful test levels: 50.45045045045045 %
+Successful eval levels: 59.29203539823009 %
+Step: 106496
+Mean test reward: 20.3125
+Mean eval reward: 21.5625
+Successful test levels: 64.35643564356435 %
+Successful eval levels: 60.0 %
+Step: 114688
+Mean test reward: 18.125
+Mean eval reward: 23.125
+Successful test levels: 50.0 %
+Successful eval levels: 57.8125 %
+Step: 122880
+Mean test reward: 25.625
+Mean eval reward: 21.25
+Successful test levels: 66.66666666666666 %
+Successful eval levels: 58.620689655172406 %
+Step: 131072
+Mean test reward: 20.9375
+Mean eval reward: 20.3125
+Successful test levels: 56.30252100840336 %
+Successful eval levels: 51.587301587301596 %
+Step: 139264
+Mean test reward: 18.125
+Mean eval reward: 22.1875
+Successful test levels: 52.72727272727272 %
+Successful eval levels: 57.25806451612904 %
+Step: 147456
+Mean test reward: 21.25
+Mean eval reward: 19.6875
+Successful test levels: 58.620689655172406 %
+Successful eval levels: 51.21951219512195 %
+Step: 155648
+Mean test reward: 23.75
+Mean eval reward: 15.9375
+Successful test levels: 61.78861788617886 %
+Successful eval levels: 47.66355140186916 %
+Step: 163840
+Mean test reward: 25.0
+Mean eval reward: 23.125
+Successful test levels: 67.79661016949152 %
+Successful eval levels: 55.639097744360896 %
+Step: 172032
+Mean test reward: 24.0625
+Mean eval reward: 25.625
+Successful test levels: 61.6 %
+Successful eval levels: 63.565891472868216 %
+Step: 180224
+Mean test reward: 19.375
+Mean eval reward: 26.875
+Successful test levels: 54.86725663716814 %
+Successful eval levels: 62.31884057971014 %
+Step: 188416
+Mean test reward: 22.1875
+Mean eval reward: 23.75
+Successful test levels: 55.46875 %
+Successful eval levels: 57.57575757575758 %
+Step: 196608
+Mean test reward: 22.8125
+Mean eval reward: 24.375
+Successful test levels: 57.03125 %
+Successful eval levels: 60.9375 %
+Step: 204800
+Mean test reward: 19.375
+Mean eval reward: 25.9375
+Successful test levels: 55.35714285714286 %
+Successful eval levels: 62.878787878787875 %
+Step: 212992
+Mean test reward: 28.125
+Mean eval reward: 25.625
+Successful test levels: 66.66666666666666 %
+Successful eval levels: 67.21311475409836 %
+Step: 221184
+Mean test reward: 23.75
+Mean eval reward: 24.0625
+Successful test levels: 62.295081967213115 %
+Successful eval levels: 60.15625 %
+Step: 229376
+Mean test reward: 20.0
+Mean eval reward: 23.4375
+Successful test levels: 51.61290322580645 %
+Successful eval levels: 60.0 %
+Step: 237568
+Mean test reward: 19.6875
+Mean eval reward: 25.3125
+Successful test levels: 54.310344827586206 %
+Successful eval levels: 58.69565217391305 %
+Step: 245760
+Mean test reward: 21.875
+Mean eval reward: 23.75
+Successful test levels: 58.333333333333336 %
+Successful eval levels: 58.01526717557252 %
+Step: 253952
+Mean test reward: 25.3125
+Mean eval reward: 22.1875
+Successful test levels: 65.85365853658537 %
+Successful eval levels: 56.34920634920635 %
+Step: 262144
+Mean test reward: 23.125
+Mean eval reward: 23.4375
+Successful test levels: 60.16260162601627 %
+Successful eval levels: 61.47540983606557 %
+Step: 270336
+Mean test reward: 20.3125
+Mean eval reward: 23.4375
+Successful test levels: 53.71900826446281 %
+Successful eval levels: 59.523809523809526 %
+Step: 278528
+Mean test reward: 24.375
+Mean eval reward: 23.4375
+Successful test levels: 61.904761904761905 %
+Successful eval levels: 60.483870967741936 %
+Step: 286720
+Mean test reward: 25.9375
+Mean eval reward: 24.0625
+Successful test levels: 65.87301587301587 %
+Successful eval levels: 58.778625954198475 %
+Step: 294912
+Mean test reward: 21.875
+Mean eval reward: 23.125
+Successful test levels: 54.263565891472865 %
+Successful eval levels: 56.92307692307692 %
+Step: 303104
+Mean test reward: 22.8125
+Mean eval reward: 26.875
+Successful test levels: 63.47826086956522 %
+Successful eval levels: 63.23529411764706 %
+Step: 311296
+Mean test reward: 26.875
+Mean eval reward: 24.0625
+Successful test levels: 67.71653543307087 %
+Successful eval levels: 66.37931034482759 %
+Step: 319488
+Mean test reward: 29.0625
+Mean eval reward: 24.6875
+Successful test levels: 67.3913043478261 %
+Successful eval levels: 58.95522388059702 %
+Step: 327680
+Mean test reward: 20.3125
+Mean eval reward: 23.125
+Successful test levels: 53.278688524590166 %
+Successful eval levels: 60.16260162601627 %
+Step: 335872
+Mean test reward: 22.1875
+Mean eval reward: 22.5
+Successful test levels: 58.67768595041323 %
+Successful eval levels: 54.54545454545454 %
+Step: 344064
+Mean test reward: 19.6875
+Mean eval reward: 25.625
+Successful test levels: 50.806451612903224 %
+Successful eval levels: 55.78231292517006 %
+Step: 352256
+Mean test reward: 23.75
+Mean eval reward: 22.1875
+Successful test levels: 63.33333333333333 %
+Successful eval levels: 51.07913669064749 %
+Step: 360448
+Mean test reward: 25.625
+Mean eval reward: 25.0
+Successful test levels: 62.59541984732825 %
+Successful eval levels: 58.3941605839416 %
+Step: 368640
+Mean test reward: 25.3125
+Mean eval reward: 29.6875
+Successful test levels: 60.902255639097746 %
+Successful eval levels: 65.97222222222221 %
+Step: 376832
+Mean test reward: 21.25
+Mean eval reward: 25.625
+Successful test levels: 59.130434782608695 %
+Successful eval levels: 56.55172413793104 %
+Step: 385024
+Mean test reward: 27.5
+Mean eval reward: 25.9375
+Successful test levels: 67.6923076923077 %
+Successful eval levels: 58.04195804195804 %
+Step: 393216
+Mean test reward: 25.9375
+Mean eval reward: 26.25
+Successful test levels: 62.40601503759399 %
+Successful eval levels: 61.76470588235294 %
+Step: 401408
+Mean test reward: 24.6875
+Mean eval reward: 23.4375
+Successful test levels: 62.20472440944882 %
+Successful eval levels: 54.347826086956516 %
+Step: 409600
+Mean test reward: 20.625
+Mean eval reward: 25.0
+Successful test levels: 51.5625 %
+Successful eval levels: 57.971014492753625 %
+Step: 417792
+Mean test reward: 23.75
+Mean eval reward: 21.5625
+Successful test levels: 61.29032258064516 %
+Successful eval levels: 55.2 %
+Step: 425984
+Mean test reward: 22.1875
+Mean eval reward: 21.875
+Successful test levels: 57.72357723577236 %
+Successful eval levels: 53.84615384615385 %
+Step: 434176
+Mean test reward: 21.5625
+Mean eval reward: 30.0
+Successful test levels: 54.330708661417326 %
+Successful eval levels: 67.13286713286713 %
+Step: 442368
+Mean test reward: 22.1875
+Mean eval reward: 23.75
+Successful test levels: 61.206896551724135 %
+Successful eval levels: 62.8099173553719 %
+Step: 450560
+Mean test reward: 21.25
+Mean eval reward: 20.9375
+Successful test levels: 52.71317829457365 %
+Successful eval levels: 52.34375 %
+Step: 458752
+Mean test reward: 22.8125
+Mean eval reward: 20.9375
+Successful test levels: 65.17857142857143 %
+Successful eval levels: 52.34375 %
+Step: 466944
+Mean test reward: 23.4375
+Mean eval reward: 23.125
+Successful test levels: 59.055118110236215 %
+Successful eval levels: 56.060606060606055 %
+Step: 475136
+Mean test reward: 22.1875
+Mean eval reward: 23.4375
+Successful test levels: 55.90551181102362 %
+Successful eval levels: 53.57142857142857 %
+Step: 483328
+Mean test reward: 20.9375
+Mean eval reward: 21.25
+Successful test levels: 54.47154471544715 %
+Successful eval levels: 54.400000000000006 %
+Step: 491520
+Mean test reward: 20.9375
+Mean eval reward: 24.375
+Successful test levels: 59.82142857142857 %
+Successful eval levels: 60.9375 %
+Step: 499712
+Mean test reward: 21.875
+Mean eval reward: 29.6875
+Successful test levels: 56.00000000000001 %
+Successful eval levels: 66.90140845070422 %
+Step: 507904
+Mean test reward: 24.6875
+Mean eval reward: 23.75
+Successful test levels: 58.51851851851851 %
+Successful eval levels: 57.14285714285714 %
+Step: 516096
+Mean test reward: 25.0
+Mean eval reward: 29.375
+Successful test levels: 60.60606060606061 %
+Successful eval levels: 64.82758620689654 %
+Step: 524288
+Mean test reward: 27.8125
+Mean eval reward: 30.0
+Successful test levels: 64.4927536231884 %
+Successful eval levels: 68.08510638297872 %
+Step: 532480
+Mean test reward: 30.0
+Mean eval reward: 29.6875
+Successful test levels: 69.06474820143885 %
+Successful eval levels: 65.06849315068493 %
+Step: 540672
+Mean test reward: 26.875
+Mean eval reward: 25.9375
+Successful test levels: 58.108108108108105 %
+Successful eval levels: 61.48148148148148 %
+Step: 548864
+Mean test reward: 26.875
+Mean eval reward: 32.5
+Successful test levels: 61.87050359712231 %
+Successful eval levels: 66.66666666666666 %
+Step: 557056
+Mean test reward: 24.0625
+Mean eval reward: 27.8125
+Successful test levels: 62.601626016260155 %
+Successful eval levels: 61.37931034482759 %
+Step: 565248
+Mean test reward: 25.9375
+Mean eval reward: 26.25
+Successful test levels: 60.58394160583942 %
+Successful eval levels: 58.74125874125874 %
+Step: 573440
+Mean test reward: 25.3125
+Mean eval reward: 26.25
+Successful test levels: 58.27338129496403 %
+Successful eval levels: 57.931034482758626 %
+Step: 581632
+Mean test reward: 22.5
+Mean eval reward: 24.375
+Successful test levels: 57.599999999999994 %
+Successful eval levels: 58.2089552238806 %
+Step: 589824
+Mean test reward: 32.5
+Mean eval reward: 25.0
+Successful test levels: 67.0967741935484 %
+Successful eval levels: 59.25925925925925 %
+Step: 598016
+Mean test reward: 23.4375
+Mean eval reward: 29.375
+Successful test levels: 57.25190839694656 %
+Successful eval levels: 65.27777777777779 %
+Step: 606208
+Mean test reward: 27.8125
+Mean eval reward: 25.3125
+Successful test levels: 71.2 %
+Successful eval levels: 55.10204081632652 %
+Step: 614400
+Mean test reward: 23.75
+Mean eval reward: 27.1875
+Successful test levels: 58.91472868217055 %
+Successful eval levels: 64.92537313432835 %
+Step: 622592
+Mean test reward: 22.5
+Mean eval reward: 24.6875
+Successful test levels: 58.536585365853654 %
+Successful eval levels: 54.861111111111114 %
+Step: 630784
+Mean test reward: 25.3125
+Mean eval reward: 25.625
+Successful test levels: 61.832061068702295 %
+Successful eval levels: 58.57142857142858 %
+Step: 638976
+Mean test reward: 23.125
+Mean eval reward: 26.5625
+Successful test levels: 59.199999999999996 %
+Successful eval levels: 62.04379562043796 %
+Step: 647168
+Mean test reward: 25.9375
+Mean eval reward: 26.5625
+Successful test levels: 62.40601503759399 %
+Successful eval levels: 66.92913385826772 %
+Step: 655360
+Mean test reward: 23.125
+Mean eval reward: 26.5625
+Successful test levels: 59.199999999999996 %
+Successful eval levels: 60.71428571428571 %
+Step: 663552
+Mean test reward: 25.9375
+Mean eval reward: 29.0625
+Successful test levels: 61.029411764705884 %
+Successful eval levels: 72.09302325581395 %
+Step: 671744
+Mean test reward: 26.25
+Mean eval reward: 22.5
+Successful test levels: 62.68656716417911 %
+Successful eval levels: 56.69291338582677 %
+Step: 679936
+Mean test reward: 24.6875
+Mean eval reward: 28.75
+Successful test levels: 60.30534351145038 %
+Successful eval levels: 68.65671641791045 %
+Step: 688128
+Mean test reward: 24.375
+Mean eval reward: 29.0625
+Successful test levels: 56.11510791366906 %
+Successful eval levels: 63.6986301369863 %
+Step: 696320
+Mean test reward: 26.5625
+Mean eval reward: 26.5625
+Successful test levels: 61.59420289855072 %
+Successful eval levels: 62.96296296296296 %
+Step: 704512
+Mean test reward: 25.625
+Mean eval reward: 29.375
+Successful test levels: 61.19402985074627 %
+Successful eval levels: 61.8421052631579 %
+Step: 712704
+Mean test reward: 27.8125
+Mean eval reward: 29.0625
+Successful test levels: 62.676056338028175 %
+Successful eval levels: 61.18421052631579 %
+Step: 720896
+Mean test reward: 23.4375
+Mean eval reward: 20.9375
+Successful test levels: 59.055118110236215 %
+Successful eval levels: 48.9051094890511 %
+Step: 729088
+Mean test reward: 27.8125
+Mean eval reward: 28.4375
+Successful test levels: 63.12056737588653 %
+Successful eval levels: 64.08450704225352 %
+Step: 737280
+Mean test reward: 28.4375
+Mean eval reward: 25.3125
+Successful test levels: 66.91176470588235 %
+Successful eval levels: 54.0 %
+Step: 745472
+Mean test reward: 30.0
+Mean eval reward: 27.1875
+Successful test levels: 71.11111111111111 %
+Successful eval levels: 64.44444444444444 %
+Step: 753664
+Mean test reward: 28.4375
+Mean eval reward: 25.3125
+Successful test levels: 61.904761904761905 %
+Successful eval levels: 58.27338129496403 %
+Step: 761856
+Mean test reward: 28.4375
+Mean eval reward: 27.5
+Successful test levels: 62.328767123287676 %
+Successful eval levels: 63.76811594202898 %
+Step: 770048
+Mean test reward: 29.375
+Mean eval reward: 28.125
+Successful test levels: 67.14285714285714 %
+Successful eval levels: 64.28571428571429 %
+Step: 778240
+Mean test reward: 26.875
+Mean eval reward: 28.4375
+Successful test levels: 64.66165413533834 %
+Successful eval levels: 63.19444444444444 %
+Step: 786432
+Mean test reward: 23.75
+Mean eval reward: 25.625
+Successful test levels: 59.375 %
+Successful eval levels: 57.34265734265735 %
+Step: 794624
+Mean test reward: 28.4375
+Mean eval reward: 24.375
+Successful test levels: 68.42105263157895 %
+Successful eval levels: 58.64661654135338 %
+Step: 802816
+Mean test reward: 24.6875
+Mean eval reward: 31.25
+Successful test levels: 62.698412698412696 %
+Successful eval levels: 66.22516556291392 %
+Step: 811008
+Mean test reward: 30.625
+Mean eval reward: 26.25
+Successful test levels: 67.58620689655173 %
+Successful eval levels: 64.61538461538461 %
+Step: 819200
+Mean test reward: 28.75
+Mean eval reward: 30.9375
+Successful test levels: 64.7887323943662 %
+Successful eval levels: 63.05732484076433 %
+Step: 827392
+Mean test reward: 25.0
+Mean eval reward: 31.25
+Successful test levels: 56.33802816901409 %
+Successful eval levels: 67.56756756756756 %
+Step: 835584
+Mean test reward: 28.4375
+Mean eval reward: 34.0625
+Successful test levels: 65.0 %
+Successful eval levels: 67.28395061728395 %
+Step: 843776
+Mean test reward: 26.25
+Mean eval reward: 32.5
+Successful test levels: 62.22222222222222 %
+Successful eval levels: 69.79865771812081 %
+Step: 851968
+Mean test reward: 27.1875
+Mean eval reward: 28.75
+Successful test levels: 61.267605633802816 %
+Successful eval levels: 62.16216216216216 %
+Step: 860160
+Mean test reward: 27.5
+Mean eval reward: 28.125
+Successful test levels: 65.18518518518519 %
+Successful eval levels: 62.06896551724138 %
+Step: 868352
+Mean test reward: 28.75
+Mean eval reward: 29.6875
+Successful test levels: 66.18705035971223 %
+Successful eval levels: 61.29032258064516 %
+Step: 876544
+Mean test reward: 23.4375
+Mean eval reward: 27.1875
+Successful test levels: 55.55555555555556 %
+Successful eval levels: 62.142857142857146 %
+Step: 884736
+Mean test reward: 26.875
+Mean eval reward: 30.0
+Successful test levels: 60.99290780141844 %
+Successful eval levels: 60.75949367088608 %
+Step: 892928
+Mean test reward: 22.1875
+Mean eval reward: 24.6875
+Successful test levels: 52.20588235294118 %
+Successful eval levels: 57.66423357664233 %
+Step: 901120
+Mean test reward: 22.5
+Mean eval reward: 24.6875
+Successful test levels: 56.25 %
+Successful eval levels: 55.633802816901415 %
+Step: 909312
+Mean test reward: 21.875
+Mean eval reward: 25.625
+Successful test levels: 60.3448275862069 %
+Successful eval levels: 63.565891472868216 %
+Step: 917504
+Mean test reward: 25.3125
+Mean eval reward: 25.3125
+Successful test levels: 65.32258064516128 %
+Successful eval levels: 60.0 %
+Step: 925696
+Mean test reward: 21.5625
+Mean eval reward: 23.4375
+Successful test levels: 61.06194690265486 %
+Successful eval levels: 60.0 %
+Step: 933888
+Mean test reward: 24.0625
+Mean eval reward: 24.0625
+Successful test levels: 58.333333333333336 %
+Successful eval levels: 63.114754098360656 %
+Step: 942080
+Mean test reward: 23.125
+Mean eval reward: 25.3125
+Successful test levels: 59.67741935483871 %
+Successful eval levels: 59.12408759124088 %
+Step: 950272
+Mean test reward: 23.75
+Mean eval reward: 20.3125
+Successful test levels: 59.375 %
+Successful eval levels: 56.52173913043478 %
+Step: 958464
+Mean test reward: 21.875
+Mean eval reward: 22.5
+Successful test levels: 63.06306306306306 %
+Successful eval levels: 61.53846153846154 %
+Step: 966656
+Mean test reward: 17.8125
+Mean eval reward: 29.6875
+Successful test levels: 54.285714285714285 %
+Successful eval levels: 66.43356643356644 %
+Step: 974848
+Mean test reward: 22.1875
+Mean eval reward: 28.4375
+Successful test levels: 53.78787878787878 %
+Successful eval levels: 66.91176470588235 %
+Step: 983040
+Mean test reward: 23.4375
+Mean eval reward: 27.5
+Successful test levels: 65.21739130434783 %
+Successful eval levels: 61.53846153846154 %
+Step: 991232
+Mean test reward: 24.375
+Mean eval reward: 25.625
+Successful test levels: 60.9375 %
+Successful eval levels: 64.56692913385827 %
+Step: 999424
+Mean test reward: 24.6875
+Mean eval reward: 21.875
+Successful test levels: 63.2 %
+Successful eval levels: 60.3448275862069 %
+Step: 1007616
+Mean test reward: 20.625
+Mean eval reward: 25.0
+Successful test levels: 51.5625 %
+Successful eval levels: 62.99212598425197 %
+Step: 1015808
+Mean test reward: 25.3125
+Mean eval reward: 25.3125
+Successful test levels: 64.8 %
+Successful eval levels: 59.12408759124088 %
+Step: 1024000
+Mean test reward: 24.375
+Mean eval reward: 23.4375
+Successful test levels: 63.41463414634146 %
+Successful eval levels: 58.59375 %
+Step: 1032192
+Mean test reward: 26.25
+Mean eval reward: 24.0625
+Successful test levels: 63.63636363636363 %
+Successful eval levels: 57.46268656716418 %
+Step: 1040384
+Mean test reward: 24.0625
+Mean eval reward: 27.8125
+Successful test levels: 65.2542372881356 %
+Successful eval levels: 68.9922480620155 %
+Step: 1048576
+Mean test reward: 24.6875
+Mean eval reward: 20.9375
+Successful test levels: 62.20472440944882 %
+Successful eval levels: 62.03703703703704 %
+Step: 1056768
+Mean test reward: 22.5
+Mean eval reward: 23.75
+Successful test levels: 58.06451612903226 %
+Successful eval levels: 66.08695652173913 %
+Step: 1064960
+Mean test reward: 27.1875
+Mean eval reward: 25.0
+Successful test levels: 64.92537313432835 %
+Successful eval levels: 60.150375939849624 %
+Step: 1073152
+Mean test reward: 24.375
+Mean eval reward: 25.625
+Successful test levels: 60.9375 %
+Successful eval levels: 60.74074074074074 %
+Step: 1081344
+Mean test reward: 25.3125
+Mean eval reward: 26.875
+Successful test levels: 66.94214876033058 %
+Successful eval levels: 61.87050359712231 %
+Step: 1089536
+Mean test reward: 25.3125
+Mean eval reward: 26.5625
+Successful test levels: 65.32258064516128 %
+Successful eval levels: 65.38461538461539 %
+Step: 1097728
+Mean test reward: 24.0625
+Mean eval reward: 21.875
+Successful test levels: 63.114754098360656 %
+Successful eval levels: 59.82905982905983 %
+Step: 1105920
+Mean test reward: 25.9375
+Mean eval reward: 23.4375
+Successful test levels: 66.93548387096774 %
+Successful eval levels: 60.483870967741936 %
+Step: 1114112
+Mean test reward: 25.9375
+Mean eval reward: 23.75
+Successful test levels: 68.0327868852459 %
+Successful eval levels: 60.317460317460316 %
+Step: 1122304
+Mean test reward: 21.5625
+Mean eval reward: 21.5625
+Successful test levels: 53.48837209302325 %
+Successful eval levels: 59.48275862068966 %
+Step: 1130496
+Mean test reward: 24.375
+Mean eval reward: 21.25
+Successful test levels: 65.0 %
+Successful eval levels: 60.71428571428571 %
+Step: 1138688
+Mean test reward: 22.8125
+Mean eval reward: 22.1875
+Successful test levels: 62.93103448275862 %
+Successful eval levels: 55.46875 %
+Step: 1146880
+Mean test reward: 23.125
+Mean eval reward: 22.5
+Successful test levels: 56.92307692307692 %
+Successful eval levels: 53.73134328358209 %
+Step: 1155072
+Mean test reward: 19.6875
+Mean eval reward: 25.3125
+Successful test levels: 55.26315789473685 %
+Successful eval levels: 61.36363636363637 %
+Step: 1163264
+Mean test reward: 22.8125
+Mean eval reward: 22.8125
+Successful test levels: 65.17857142857143 %
+Successful eval levels: 61.34453781512605 %
+Step: 1171456
+Mean test reward: 24.0625
+Mean eval reward: 21.25
+Successful test levels: 61.6 %
+Successful eval levels: 58.119658119658126 %
+Step: 1179648
+Mean test reward: 26.25
+Mean eval reward: 27.5
+Successful test levels: 64.61538461538461 %
+Successful eval levels: 61.97183098591549 %
+Step: 1187840
+Mean test reward: 23.125
+Mean eval reward: 25.0
+Successful test levels: 60.16260162601627 %
+Successful eval levels: 65.57377049180327 %
+Step: 1196032
+Mean test reward: 24.375
+Mean eval reward: 22.8125
+Successful test levels: 63.41463414634146 %
+Successful eval levels: 56.58914728682171 %
+Step: 1204224
+Mean test reward: 25.9375
+Mean eval reward: 23.125
+Successful test levels: 66.93548387096774 %
+Successful eval levels: 62.71186440677966 %
+Step: 1212416
+Mean test reward: 22.1875
+Mean eval reward: 22.1875
+Successful test levels: 64.54545454545455 %
+Successful eval levels: 60.16949152542372 %
+Step: 1220608
+Mean test reward: 25.9375
+Mean eval reward: 23.75
+Successful test levels: 61.940298507462686 %
+Successful eval levels: 66.08695652173913 %
+Step: 1228800
+Mean test reward: 23.4375
+Mean eval reward: 24.6875
+Successful test levels: 58.139534883720934 %
+Successful eval levels: 64.75409836065575 %
+Step: 1236992
+Mean test reward: 24.375
+Mean eval reward: 23.75
+Successful test levels: 67.82608695652173 %
+Successful eval levels: 65.51724137931035 %
+Step: 1245184
+Mean test reward: 24.375
+Mean eval reward: 27.5
+Successful test levels: 65.0 %
+Successful eval levels: 66.16541353383458 %
+Step: 1253376
+Mean test reward: 28.75
+Mean eval reward: 27.8125
+Successful test levels: 67.15328467153284 %
+Successful eval levels: 64.96350364963503 %
+Step: 1261568
+Mean test reward: 27.5
+Mean eval reward: 23.4375
+Successful test levels: 74.57627118644068 %
+Successful eval levels: 64.65517241379311 %
+Step: 1269760
+Mean test reward: 25.3125
+Mean eval reward: 25.9375
+Successful test levels: 63.77952755905512 %
+Successful eval levels: 63.358778625954194 %
+Step: 1277952
+Mean test reward: 22.1875
+Mean eval reward: 23.4375
+Successful test levels: 62.83185840707964 %
+Successful eval levels: 53.956834532374096 %
+Step: 1286144
+Mean test reward: 27.1875
+Mean eval reward: 27.8125
+Successful test levels: 64.92537313432835 %
+Successful eval levels: 66.4179104477612 %
+Step: 1294336
+Mean test reward: 28.4375
+Mean eval reward: 25.625
+Successful test levels: 65.0 %
+Successful eval levels: 63.565891472868216 %
+Step: 1302528
+Mean test reward: 25.9375
+Mean eval reward: 23.125
+Successful test levels: 66.4 %
+Successful eval levels: 58.26771653543307 %
+Step: 1310720
+Mean test reward: 27.1875
+Mean eval reward: 29.375
+Successful test levels: 67.96875 %
+Successful eval levels: 65.27777777777779 %
+Step: 1318912
+Mean test reward: 25.0
+Mean eval reward: 25.9375
+Successful test levels: 59.25925925925925 %
+Successful eval levels: 63.358778625954194 %
+Step: 1327104
+Mean test reward: 21.25
+Mean eval reward: 26.875
+Successful test levels: 58.620689655172406 %
+Successful eval levels: 60.99290780141844 %
+Step: 1335296
+Mean test reward: 25.0
+Mean eval reward: 22.1875
+Successful test levels: 65.04065040650406 %
+Successful eval levels: 55.03875968992248 %
+Step: 1343488
+Mean test reward: 24.6875
+Mean eval reward: 26.5625
+Successful test levels: 58.51851851851851 %
+Successful eval levels: 63.90977443609023 %
+Step: 1351680
+Mean test reward: 25.9375
+Mean eval reward: 25.9375
+Successful test levels: 65.35433070866141 %
+Successful eval levels: 63.84615384615384 %
+Step: 1359872
+Mean test reward: 25.625
+Mean eval reward: 28.75
+Successful test levels: 68.33333333333333 %
+Successful eval levels: 70.76923076923077 %
+Step: 1368064
+Mean test reward: 27.1875
+Mean eval reward: 27.1875
+Successful test levels: 69.04761904761905 %
+Successful eval levels: 71.31147540983606 %
+Step: 1376256
+Mean test reward: 22.5
+Mean eval reward: 20.625
+Successful test levels: 63.1578947368421 %
+Successful eval levels: 57.89473684210527 %
+Step: 1384448
+Mean test reward: 23.75
+Mean eval reward: 27.1875
+Successful test levels: 63.33333333333333 %
+Successful eval levels: 63.503649635036496 %
+Step: 1392640
+Mean test reward: 21.875
+Mean eval reward: 23.4375
+Successful test levels: 57.85123966942148 %
+Successful eval levels: 59.523809523809526 %
+Step: 1400832
+Mean test reward: 24.375
+Mean eval reward: 29.0625
+Successful test levels: 65.54621848739495 %
+Successful eval levels: 73.22834645669292 %
+Step: 1409024
+Mean test reward: 23.4375
+Mean eval reward: 27.1875
+Successful test levels: 67.56756756756756 %
+Successful eval levels: 71.31147540983606 %
+Step: 1417216
+Mean test reward: 25.625
+Mean eval reward: 25.0
+Successful test levels: 66.66666666666666 %
+Successful eval levels: 61.53846153846154 %
+Step: 1425408
+Mean test reward: 26.5625
+Mean eval reward: 25.625
+Successful test levels: 71.42857142857143 %
+Successful eval levels: 63.565891472868216 %
+Step: 1433600
+Mean test reward: 25.9375
+Mean eval reward: 25.9375
+Successful test levels: 68.59504132231406 %
+Successful eval levels: 66.4 %
+Step: 1441792
+Mean test reward: 26.875
+Mean eval reward: 27.5
+Successful test levels: 70.49180327868852 %
+Successful eval levels: 69.84126984126983 %
+Step: 1449984
+Mean test reward: 23.4375
+Mean eval reward: 28.4375
+Successful test levels: 63.02521008403361 %
+Successful eval levels: 71.09375 %
+Step: 1458176
+Mean test reward: 27.1875
+Mean eval reward: 30.3125
+Successful test levels: 67.96875 %
+Successful eval levels: 70.28985507246377 %
+Step: 1466368
+Mean test reward: 28.4375
+Mean eval reward: 22.8125
+Successful test levels: 70.54263565891473 %
+Successful eval levels: 62.39316239316239 %
+Step: 1474560
+Mean test reward: 23.125
+Mean eval reward: 25.0
+Successful test levels: 60.16260162601627 %
+Successful eval levels: 62.01550387596899 %
+Step: 1482752
+Mean test reward: 26.5625
+Mean eval reward: 24.6875
+Successful test levels: 69.67213114754098 %
+Successful eval levels: 65.83333333333333 %
+Step: 1490944
+Mean test reward: 30.9375
+Mean eval reward: 27.1875
+Successful test levels: 75.0 %
+Successful eval levels: 60.83916083916085 %
+Step: 1499136
+Mean test reward: 28.75
+Mean eval reward: 25.0
+Successful test levels: 68.14814814814815 %
+Successful eval levels: 69.56521739130434 %
+Step: 1507328
+Mean test reward: 25.9375
+Mean eval reward: 29.0625
+Successful test levels: 65.35433070866141 %
+Successful eval levels: 65.95744680851064 %
+Step: 1515520
+Mean test reward: 30.625
+Mean eval reward: 24.6875
+Successful test levels: 75.38461538461539 %
+Successful eval levels: 59.84848484848485 %
+Step: 1523712
+Mean test reward: 26.875
+Mean eval reward: 23.4375
+Successful test levels: 71.07438016528926 %
+Successful eval levels: 58.139534883720934 %
+Step: 1531904
+Mean test reward: 22.8125
+Mean eval reward: 30.9375
+Successful test levels: 58.87096774193549 %
+Successful eval levels: 69.23076923076923 %
+Step: 1540096
+Mean test reward: 25.0
+Mean eval reward: 31.875
+Successful test levels: 66.66666666666666 %
+Successful eval levels: 67.54966887417218 %
+Step: 1548288
+Mean test reward: 30.3125
+Mean eval reward: 29.0625
+Successful test levels: 65.1006711409396 %
+Successful eval levels: 66.90647482014388 %
+Step: 1556480
+Mean test reward: 30.0
+Mean eval reward: 27.5
+Successful test levels: 69.56521739130434 %
+Successful eval levels: 61.53846153846154 %
+Step: 1564672
+Mean test reward: 29.375
+Mean eval reward: 31.5625
+Successful test levels: 72.86821705426357 %
+Successful eval levels: 69.6551724137931 %
+Step: 1572864
+Mean test reward: 29.375
+Mean eval reward: 28.125
+Successful test levels: 69.11764705882352 %
+Successful eval levels: 59.60264900662252 %
+Step: 1581056
+Mean test reward: 24.375
+Mean eval reward: 28.75
+Successful test levels: 68.42105263157895 %
+Successful eval levels: 68.65671641791045 %
+Step: 1589248
+Mean test reward: 26.5625
+Mean eval reward: 31.25
+Successful test levels: 63.43283582089553 %
+Successful eval levels: 69.93006993006993 %
+Step: 1597440
+Mean test reward: 31.875
+Mean eval reward: 32.8125
+Successful test levels: 72.85714285714285 %
+Successful eval levels: 73.42657342657343 %
+Step: 1605632
+Mean test reward: 31.875
+Mean eval reward: 29.6875
+Successful test levels: 69.86301369863014 %
+Successful eval levels: 67.37588652482269 %
+Step: 1613824
+Mean test reward: 28.4375
+Mean eval reward: 30.9375
+Successful test levels: 64.08450704225352 %
+Successful eval levels: 67.3469387755102 %
+Step: 1622016
+Mean test reward: 25.625
+Mean eval reward: 27.8125
+Successful test levels: 63.07692307692307 %
+Successful eval levels: 63.12056737588653 %
+Step: 1630208
+Mean test reward: 28.125
+Mean eval reward: 28.4375
+Successful test levels: 69.76744186046511 %
+Successful eval levels: 72.22222222222221 %
+Step: 1638400
+Mean test reward: 26.875
+Mean eval reward: 30.625
+Successful test levels: 70.49180327868852 %
+Successful eval levels: 64.47368421052632 %
+Step: 1646592
+Mean test reward: 30.0
+Mean eval reward: 32.5
+Successful test levels: 71.64179104477611 %
+Successful eval levels: 74.82014388489209 %
+Step: 1654784
+Mean test reward: 28.75
+Mean eval reward: 30.625
+Successful test levels: 70.76923076923077 %
+Successful eval levels: 72.05882352941177 %
+Step: 1662976
+Mean test reward: 29.6875
+Mean eval reward: 27.5
+Successful test levels: 69.85294117647058 %
+Successful eval levels: 68.21705426356588 %
+Step: 1671168
+Mean test reward: 31.875
+Mean eval reward: 30.625
+Successful test levels: 77.86259541984732 %
+Successful eval levels: 68.05555555555556 %
+Step: 1679360
+Mean test reward: 30.0
+Mean eval reward: 27.8125
+Successful test levels: 71.64179104477611 %
+Successful eval levels: 68.46153846153847 %
+Step: 1687552
+Mean test reward: 27.8125
+Mean eval reward: 26.875
+Successful test levels: 72.95081967213115 %
+Successful eval levels: 65.15151515151516 %
+Step: 1695744
+Mean test reward: 30.9375
+Mean eval reward: 25.0
+Successful test levels: 77.95275590551181 %
+Successful eval levels: 59.70149253731343 %
+Step: 1703936
+Mean test reward: 27.5
+Mean eval reward: 33.75
+Successful test levels: 65.18518518518519 %
+Successful eval levels: 73.46938775510205 %
+Step: 1712128
+Mean test reward: 29.0625
+Mean eval reward: 33.125
+Successful test levels: 69.40298507462687 %
+Successful eval levels: 70.19867549668875 %
+Step: 1720320
+Mean test reward: 30.9375
+Mean eval reward: 26.25
+Successful test levels: 72.79411764705883 %
+Successful eval levels: 60.86956521739131 %
+Step: 1728512
+Mean test reward: 34.0625
+Mean eval reward: 25.3125
+Successful test levels: 77.85714285714286 %
+Successful eval levels: 61.36363636363637 %
+Step: 1736704
+Mean test reward: 25.0
+Mean eval reward: 34.6875
+Successful test levels: 66.11570247933885 %
+Successful eval levels: 71.15384615384616 %
+Step: 1744896
+Mean test reward: 21.5625
+Mean eval reward: 26.875
+Successful test levels: 60.0 %
+Successful eval levels: 68.25396825396825 %
+Step: 1753088
+Mean test reward: 30.625
+Mean eval reward: 25.9375
+Successful test levels: 71.53284671532847 %
+Successful eval levels: 65.87301587301587 %
+Step: 1761280
+Mean test reward: 31.875
+Mean eval reward: 27.1875
+Successful test levels: 68.45637583892618 %
+Successful eval levels: 68.50393700787401 %
+Step: 1769472
+Mean test reward: 31.5625
+Mean eval reward: 32.8125
+Successful test levels: 70.13888888888889 %
+Successful eval levels: 73.42657342657343 %
+Step: 1777664
+Mean test reward: 26.5625
+Mean eval reward: 34.375
+Successful test levels: 60.71428571428571 %
+Successful eval levels: 75.34246575342466 %
+Step: 1785856
+Mean test reward: 31.25
+Mean eval reward: 31.875
+Successful test levels: 72.46376811594203 %
+Successful eval levels: 71.32867132867133 %
+Step: 1794048
+Mean test reward: 29.6875
+Mean eval reward: 26.25
+Successful test levels: 70.37037037037037 %
+Successful eval levels: 64.61538461538461 %
+Step: 1802240
+Mean test reward: 29.6875
+Mean eval reward: 32.1875
+Successful test levels: 65.97222222222221 %
+Successful eval levels: 66.02564102564102 %
+Step: 1810432
+Mean test reward: 29.0625
+Mean eval reward: 27.5
+Successful test levels: 70.99236641221374 %
+Successful eval levels: 65.67164179104478 %
+Step: 1818624
+Mean test reward: 26.5625
+Mean eval reward: 29.375
+Successful test levels: 63.43283582089553 %
+Successful eval levels: 72.3076923076923 %
+Step: 1826816
+Mean test reward: 30.0
+Mean eval reward: 27.1875
+Successful test levels: 70.58823529411765 %
+Successful eval levels: 64.92537313432835 %
+Step: 1835008
+Mean test reward: 26.875
+Mean eval reward: 30.9375
+Successful test levels: 66.15384615384615 %
+Successful eval levels: 66.44295302013423 %
+Step: 1843200
+Mean test reward: 27.5
+Mean eval reward: 31.25
+Successful test levels: 67.6923076923077 %
+Successful eval levels: 69.44444444444444 %
+Step: 1851392
+Mean test reward: 28.125
+Mean eval reward: 28.125
+Successful test levels: 70.86614173228347 %
+Successful eval levels: 69.76744186046511 %
+Step: 1859584
+Mean test reward: 33.75
+Mean eval reward: 25.9375
+Successful test levels: 72.48322147651007 %
+Successful eval levels: 62.878787878787875 %
+Step: 1867776
+Mean test reward: 35.0
+Mean eval reward: 30.625
+Successful test levels: 78.87323943661971 %
+Successful eval levels: 73.13432835820896 %
+Step: 1875968
+Mean test reward: 28.75
+Mean eval reward: 30.625
+Successful test levels: 71.875 %
+Successful eval levels: 74.24242424242425 %
+Step: 1884160
+Mean test reward: 25.625
+Mean eval reward: 24.6875
+Successful test levels: 61.19402985074627 %
+Successful eval levels: 66.38655462184873 %
+Step: 1892352
+Mean test reward: 28.4375
+Mean eval reward: 31.875
+Successful test levels: 68.42105263157895 %
+Successful eval levels: 70.34482758620689 %
+Step: 1900544
+Mean test reward: 32.1875
+Mean eval reward: 29.6875
+Successful test levels: 79.23076923076923 %
+Successful eval levels: 71.42857142857143 %
+Step: 1908736
+Mean test reward: 24.375
+Mean eval reward: 26.875
+Successful test levels: 65.0 %
+Successful eval levels: 66.66666666666666 %
+Step: 1916928
+Mean test reward: 27.8125
+Mean eval reward: 30.625
+Successful test levels: 65.92592592592592 %
+Successful eval levels: 70.0 %
+Step: 1925120
+Mean test reward: 23.75
+Mean eval reward: 28.4375
+Successful test levels: 68.46846846846847 %
+Successful eval levels: 64.08450704225352 %
+Step: 1933312
+Mean test reward: 24.375
+Mean eval reward: 33.4375
+Successful test levels: 66.10169491525424 %
+Successful eval levels: 71.81208053691275 %
+Step: 1941504
+Mean test reward: 29.375
+Mean eval reward: 26.875
+Successful test levels: 70.67669172932331 %
+Successful eval levels: 68.8 %
+Step: 1949696
+Mean test reward: 26.875
+Mean eval reward: 27.8125
+Successful test levels: 70.49180327868852 %
+Successful eval levels: 69.53125 %
+Step: 1957888
+Mean test reward: 31.25
+Mean eval reward: 28.4375
+Successful test levels: 71.94244604316546 %
+Successful eval levels: 69.46564885496184 %
+Step: 1966080
+Mean test reward: 26.875
+Mean eval reward: 28.125
+Successful test levels: 73.50427350427351 %
+Successful eval levels: 70.3125 %
+Step: 1974272
+Mean test reward: 29.0625
+Mean eval reward: 30.9375
+Successful test levels: 71.53846153846153 %
+Successful eval levels: 75.57251908396947 %
+Step: 1982464
+Mean test reward: 24.6875
+Mean eval reward: 28.4375
+Successful test levels: 68.69565217391305 %
+Successful eval levels: 74.59016393442623 %
+Step: 1990656
+Mean test reward: 31.25
+Mean eval reward: 26.875
+Successful test levels: 74.6268656716418 %
+Successful eval levels: 69.35483870967742 %
+Step: 1998848
+Mean test reward: 31.5625
+Mean eval reward: 28.125
+Successful test levels: 75.3731343283582 %
+Successful eval levels: 66.66666666666666 %
+Step: 2007040
+Mean test reward: 26.875
+Mean eval reward: 26.875
+Successful test levels: 72.88135593220339 %
+Successful eval levels: 70.49180327868852 %
+Step: 2015232
+Mean test reward: 27.1875
+Mean eval reward: 30.9375
+Successful test levels: 74.35897435897436 %
+Successful eval levels: 70.2127659574468 %
+Step: 2023424
+Mean test reward: 27.8125
+Mean eval reward: 27.5
+Successful test levels: 70.63492063492063 %
+Successful eval levels: 67.6923076923077 %
+Step: 2031616
+Mean test reward: 25.0
+Mean eval reward: 30.0
+Successful test levels: 67.22689075630252 %
+Successful eval levels: 73.84615384615385 %
+Step: 2039808
+Mean test reward: 29.0625
+Mean eval reward: 28.4375
+Successful test levels: 70.99236641221374 %
+Successful eval levels: 69.46564885496184 %
+Step: 2048000
+Mean test reward: 26.25
+Mean eval reward: 28.125
+Successful test levels: 74.33628318584071 %
+Successful eval levels: 67.66917293233082 %
+Step: 2056192
+Mean test reward: 28.125
+Mean eval reward: 30.9375
+Successful test levels: 72.58064516129032 %
+Successful eval levels: 72.26277372262774 %
+Step: 2064384
+Mean test reward: 25.3125
+Mean eval reward: 30.0
+Successful test levels: 69.23076923076923 %
+Successful eval levels: 73.2824427480916 %
+Step: 2072576
+Mean test reward: 24.0625
+Mean eval reward: 27.8125
+Successful test levels: 73.33333333333333 %
+Successful eval levels: 66.9172932330827 %
+Step: 2080768
+Mean test reward: 24.375
+Mean eval reward: 25.9375
+Successful test levels: 68.42105263157895 %
+Successful eval levels: 68.59504132231406 %
+Step: 2088960
+Mean test reward: 25.0
+Mean eval reward: 27.1875
+Successful test levels: 70.17543859649122 %
+Successful eval levels: 69.6 %
+Step: 2097152
+Mean test reward: 30.625
+Mean eval reward: 25.625
+Successful test levels: 78.4 %
+Successful eval levels: 73.21428571428571 %
+Step: 2105344
+Mean test reward: 27.8125
+Mean eval reward: 25.0
+Successful test levels: 73.55371900826447 %
+Successful eval levels: 64.51612903225806 %
+Step: 2113536
+Mean test reward: 27.5
+Mean eval reward: 25.9375
+Successful test levels: 75.86206896551724 %
+Successful eval levels: 64.34108527131784 %
+Step: 2121728
+Mean test reward: 27.8125
+Mean eval reward: 31.25
+Successful test levels: 74.78991596638656 %
+Successful eval levels: 75.18796992481202 %
+Step: 2129920
+Mean test reward: 27.8125
+Mean eval reward: 26.875
+Successful test levels: 68.46153846153847 %
+Successful eval levels: 67.1875 %
+Step: 2138112
+Mean test reward: 28.4375
+Mean eval reward: 33.125
+Successful test levels: 72.22222222222221 %
+Successful eval levels: 78.51851851851852 %
+Step: 2146304
+Mean test reward: 31.5625
+Mean eval reward: 23.125
+Successful test levels: 75.93984962406014 %
+Successful eval levels: 64.34782608695652 %
+Step: 2154496
+Mean test reward: 28.125
+Mean eval reward: 32.1875
+Successful test levels: 68.70229007633588 %
+Successful eval levels: 72.53521126760563 %
+Step: 2162688
+Mean test reward: 29.6875
+Mean eval reward: 27.1875
+Successful test levels: 67.37588652482269 %
+Successful eval levels: 69.04761904761905 %
+Step: 2170880
+Mean test reward: 32.1875
+Mean eval reward: 29.6875
+Successful test levels: 77.44360902255639 %
+Successful eval levels: 73.64341085271317 %
+Step: 2179072
+Mean test reward: 30.3125
+Mean eval reward: 28.125
+Successful test levels: 76.37795275590551 %
+Successful eval levels: 68.18181818181817 %
+Step: 2187264
+Mean test reward: 31.25
+Mean eval reward: 28.4375
+Successful test levels: 76.92307692307693 %
+Successful eval levels: 71.09375 %
+Step: 2195456
+Mean test reward: 26.5625
+Mean eval reward: 24.0625
+Successful test levels: 74.56140350877193 %
+Successful eval levels: 68.14159292035397 %
+Step: 2203648
+Mean test reward: 28.4375
+Mean eval reward: 32.8125
+Successful test levels: 73.98373983739837 %
+Successful eval levels: 76.08695652173914 %
+Step: 2211840
+Mean test reward: 31.25
+Mean eval reward: 30.3125
+Successful test levels: 78.74015748031496 %
+Successful eval levels: 75.78125 %
+Step: 2220032
+Mean test reward: 29.6875
+Mean eval reward: 25.0
+Successful test levels: 75.39682539682539 %
+Successful eval levels: 72.72727272727273 %
+Step: 2228224
+Mean test reward: 28.125
+Mean eval reward: 27.8125
+Successful test levels: 72.58064516129032 %
+Successful eval levels: 78.76106194690266 %
+Step: 2236416
+Mean test reward: 25.625
+Mean eval reward: 25.0
+Successful test levels: 68.33333333333333 %
+Successful eval levels: 66.11570247933885 %
+Step: 2244608
+Mean test reward: 30.9375
+Mean eval reward: 25.3125
+Successful test levels: 76.74418604651163 %
+Successful eval levels: 66.94214876033058 %
+Step: 2252800
+Mean test reward: 25.625
+Mean eval reward: 27.5
+Successful test levels: 70.08547008547008 %
+Successful eval levels: 68.75 %
+Step: 2260992
+Mean test reward: 30.3125
+Mean eval reward: 28.75
+Successful test levels: 72.93233082706767 %
+Successful eval levels: 71.875 %
+Step: 2269184
+Mean test reward: 27.1875
+Mean eval reward: 27.5
+Successful test levels: 66.41221374045801 %
+Successful eval levels: 70.96774193548387 %
+Step: 2277376
+Mean test reward: 28.4375
+Mean eval reward: 29.375
+Successful test levels: 69.46564885496184 %
+Successful eval levels: 64.82758620689654 %
+Step: 2285568
+Mean test reward: 30.3125
+Mean eval reward: 35.92878723144531
+Successful test levels: 74.04580152671755 %
+Successful eval levels: 77.7027027027027 %
+Step: 2293760
+Mean test reward: 30.625
+Mean eval reward: 29.04583168029785
+Successful test levels: 74.80916030534351 %
+Successful eval levels: 67.3913043478261 %
+Step: 2301952
+Mean test reward: 27.8125
+Mean eval reward: 29.97547149658203
+Successful test levels: 69.53125 %
+Successful eval levels: 72.72727272727273 %
+Step: 2310144
+Mean test reward: 34.0625
+Mean eval reward: 29.96728515625
+Successful test levels: 77.30496453900709 %
+Successful eval levels: 73.2824427480916 %
+Step: 2318336
+Mean test reward: 32.1875
+Mean eval reward: 32.139488220214844
+Successful test levels: 79.23076923076923 %
+Successful eval levels: 71.03448275862068 %
+Step: 2326528
+Mean test reward: 30.9375
+Mean eval reward: 30.879714965820312
+Successful test levels: 74.43609022556392 %
+Successful eval levels: 68.27586206896552 %
+Step: 2334720
+Mean test reward: 33.75
+Mean eval reward: 29.000629425048828
+Successful test levels: 75.0 %
+Successful eval levels: 71.53846153846153 %
+Step: 2342912
+Mean test reward: 30.3125
+Mean eval reward: 28.683469772338867
+Successful test levels: 74.04580152671755 %
+Successful eval levels: 68.14814814814815 %
+Step: 2351104
+Mean test reward: 27.5
+Mean eval reward: 32.41378402709961
+Successful test levels: 77.19298245614034 %
+Successful eval levels: 75.36231884057972 %
+Step: 2359296
+Mean test reward: 31.5625
+Mean eval reward: 30.843477249145508
+Successful test levels: 78.90625 %
+Successful eval levels: 72.79411764705883 %
+Step: 2367488
+Mean test reward: 29.0625
+Mean eval reward: 32.39033889770508
+Successful test levels: 75.60975609756098 %
+Successful eval levels: 70.27027027027027 %
+Step: 2375680
+Mean test reward: 31.875
+Mean eval reward: 29.26776695251465
+Successful test levels: 73.91304347826086 %
+Successful eval levels: 69.11764705882352 %
+Step: 2383872
+Mean test reward: 32.8125
+Mean eval reward: 31.125659942626953
+Successful test levels: 76.08695652173914 %
+Successful eval levels: 72.99270072992701 %
+Step: 2392064
+Mean test reward: 28.4375
+Mean eval reward: 32.35730743408203
+Successful test levels: 73.98373983739837 %
+Successful eval levels: 77.03703703703704 %
+Step: 2400256
+Mean test reward: 29.0625
+Mean eval reward: 30.47834587097168
+Successful test levels: 75.0 %
+Successful eval levels: 72.05882352941177 %
+Step: 2408448
+Mean test reward: 26.25
+Mean eval reward: 29.849790573120117
+Successful test levels: 71.7948717948718 %
+Successful eval levels: 72.18045112781954 %
+Step: 2416640
+Mean test reward: 30.3125
+Mean eval reward: 26.116775512695312
+Successful test levels: 70.8029197080292 %
+Successful eval levels: 67.74193548387096 %
+Step: 2424832
+Mean test reward: 25.625
+Mean eval reward: 27.667999267578125
+Successful test levels: 66.12903225806451 %
+Successful eval levels: 70.07874015748031 %
+Step: 2433024
+Mean test reward: 34.0625
+Mean eval reward: 28.909753799438477
+Successful test levels: 80.14705882352942 %
+Successful eval levels: 65.49295774647888 %
+Step: 2441216
+Mean test reward: 29.6875
+Mean eval reward: 31.38492774963379
+Successful test levels: 76.0 %
+Successful eval levels: 73.72262773722628 %
+Step: 2449408
+Mean test reward: 30.3125
+Mean eval reward: 30.443408966064453
+Successful test levels: 75.78125 %
+Successful eval levels: 77.16535433070865 %
+Step: 2457600
+Mean test reward: 26.25
+Mean eval reward: 26.403032302856445
+Successful test levels: 68.85245901639344 %
+Successful eval levels: 64.8854961832061 %
+Step: 2465792
+Mean test reward: 30.0
+Mean eval reward: 31.05799674987793
+Successful test levels: 76.19047619047619 %
+Successful eval levels: 74.07407407407408 %
+Step: 2473984
+Mean test reward: 30.0
+Mean eval reward: 32.598602294921875
+Successful test levels: 75.59055118110236 %
+Successful eval levels: 75.0 %
+Step: 2482176
+Mean test reward: 24.0625
+Mean eval reward: 26.694311141967773
+Successful test levels: 67.54385964912281 %
+Successful eval levels: 66.66666666666666 %
+Step: 2490368
+Mean test reward: 31.875
+Mean eval reward: 27.621427536010742
+Successful test levels: 75.0 %
+Successful eval levels: 71.2 %
+Step: 2498560
+Mean test reward: 22.5
+Mean eval reward: 30.411258697509766
+Successful test levels: 65.45454545454545 %
+Successful eval levels: 70.50359712230215 %
+Step: 2506752
+Mean test reward: 30.9375
+Mean eval reward: 26.371137619018555
+Successful test levels: 79.2 %
+Successful eval levels: 72.64957264957265 %
+Completed training!
