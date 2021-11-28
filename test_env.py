@@ -1,6 +1,6 @@
 
 num_envs = 32
-num_levels = 10
+num_levels = 1000
 
 envname = 'coinrun'
 
