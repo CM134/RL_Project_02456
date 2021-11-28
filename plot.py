@@ -7,10 +7,8 @@ from os.path import isfile, join
 
 import glob
 
-from numpy.lib.function_base import append
-
 filenames = sorted(glob.glob("./scores/*"))
-
+print(filenames)
 
 PolicyDe_rew_eval = []
 IMPlarge_rew_eval = []
@@ -90,7 +88,8 @@ for fname in filenames:
                 IMPshort_rate_test.append(data)
         elif (fname.find('step') != -1):
             steps = data # always the same just overwrite
-        
+
+#%%      
 std_PolicyDe_rew_eval =  np.std(np.array(PolicyDe_rew_eval ), axis = 0)
 std_IMPlarge_rew_eval =  np.std(np.array(IMPlarge_rew_eval ), axis = 0)
 std_IMPshort_rew_eval =  np.std(np.array(IMPshort_rew_eval ), axis = 0)
@@ -124,8 +123,6 @@ PolicyDe_rate_test = np.mean(np.array(PolicyDe_rate_test), axis = 0)
 IMPlarge_rate_test = np.mean(np.array(IMPlarge_rate_test), axis = 0)
 IMPshort_rate_test = np.mean(np.array(IMPshort_rate_test), axis = 0)
 baseline_rate_test = np.mean(np.array(baseline_rate_test), axis = 0)
-
-
 
 
 rate_eval = [PolicyDe_rate_eval, IMPlarge_rate_eval, IMPshort_rate_eval, baseline_rate_eval]
@@ -168,3 +165,5 @@ plt.grid(True)
 plt.xlim([0,2.5e6])
 plt.show()
 
+
+# %%
