@@ -8,7 +8,6 @@ from os.path import isfile, join
 import glob
 
 filenames = sorted(glob.glob("./scores/*"))
-print(filenames)
 
 PolicyDe_rew_eval = []
 IMPlarge_rew_eval = []
@@ -89,7 +88,7 @@ for fname in filenames:
         elif (fname.find('step') != -1):
             steps = data # always the same just overwrite
 
-#%%      
+      
 std_PolicyDe_rew_eval =  np.std(np.array(PolicyDe_rew_eval ), axis = 0)
 std_IMPlarge_rew_eval =  np.std(np.array(IMPlarge_rew_eval ), axis = 0)
 std_IMPshort_rew_eval =  np.std(np.array(IMPshort_rew_eval ), axis = 0)
@@ -134,6 +133,25 @@ rew_test = [PolicyDe_rew_test, IMPlarge_rew_test, IMPshort_rew_test, baseline_re
 
 name = ['IMPALA+3-Layered Policy', 'IMPALA-LARGE', 'IMPALA', 'Baseline']
 
+#%% Compute moving average
+
+def moving_average(a, n=3) :
+    ret = np.cumsum(a, dtype=float)
+    ret[n:] = ret[n:] - ret[:-n]
+    return ret[n - 1:] / n
+
+win_size = 20
+
+for i in range(len(rate_eval)):
+    rate_eval[i] = moving_average(rate_eval[i], n= win_size)
+    rate_test[i] = moving_average(rate_test[i], n= win_size)
+    rew_eval[i] = moving_average(rew_eval[i], n= win_size)
+    rew_test[i] = moving_average(rew_test[i], n= win_size)
+
+steps_mov = steps[:-(win_size-1)]
+
+
+
 #%% Plot
 import matplotlib.pyplot as plt
 # if we have several runs we could do the following: https://stackoverflow.com/questions/12957582/plot-yerr-xerr-as-shaded-region-rather-than-error-bars
@@ -141,12 +159,12 @@ import matplotlib.pyplot as plt
 clr = ['orange','steelblue','mediumseagreen','crimson']
 plt.figure()
 for i in range(len(rate_eval)):
-    plt.plot(steps, rate_eval[i] , clr[i])
+    plt.plot(steps_mov, rate_eval[i] , clr[i])
 
 plt.legend(name)
 # clr = ['orange','steelblue','mediumseagreen','crimson']
 for i in range(len(rate_test)):
-    plt.plot(steps, rate_test[i], color=clr[i], linestyle='--')
+    plt.plot(steps_mov, rate_test[i], color=clr[i], linestyle='--')
 plt.grid(True)
 plt.xlim([0,2.5e6])
 plt.show()
@@ -155,12 +173,12 @@ plt.show()
 clr = ['orange','steelblue','mediumseagreen','crimson']
 plt.figure()
 for i in range(len(rew_eval)):
-    plt.plot(steps, rew_eval[i] , clr[i])
+    plt.plot(steps_mov, rew_eval[i] , clr[i])
 
 plt.legend(name)
 # clr = ['orange','steelblue','mediumseagreen','crimson']
 for i in range(len(rew_test)):
-    plt.plot(steps, rew_test[i], color=clr[i], linestyle='--')
+    plt.plot(steps_mov, rew_test[i], color=clr[i], linestyle='--')
 plt.grid(True)
 plt.xlim([0,2.5e6])
 plt.show()
