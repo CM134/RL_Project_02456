@@ -254,5 +254,5 @@ print('Successful levels:', success_rate,'%')
 
 import numpy as np
 
-np.savetxt('./scores/' + netname + '_red_reward.csv', mean_reward, delimiter=', ', fmt = '% s')
-np.savetxt('./scores/' + netname + '_red.csv', mean_reward, delimiter=', ', fmt = '% s')
+np.savetxt('./scores/' + netname + '_noise_reward.csv', mean_reward, delimiter=', ', fmt = '% s')
+np.savetxt('./scores/' + netname + '_noise.csv', mean_reward, delimiter=', ', fmt = '% s')
