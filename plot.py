@@ -88,6 +88,7 @@ for fname in filenames:
         elif (fname.find('step') != -1):
             steps = data # always the same just overwrite
 
+#%%
       
 std_PolicyDe_rew_eval =  np.std(np.array(PolicyDe_rew_eval ), axis = 0)
 std_IMPlarge_rew_eval =  np.std(np.array(IMPlarge_rew_eval ), axis = 0)
