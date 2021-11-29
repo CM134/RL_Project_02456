@@ -108,8 +108,17 @@ lvl = [10, 10000,1000,100,5000,500]
 
 plt.figure()
 plt.plot(lvl,rate_eval_lvl, 'x')
+plt.plot(lvl,rate_test_lvl, 'o')
+plt.xscale('log')
+plt.legend(['test','train'])
+plt.show()
+
+
+plt.figure()
+plt.plot(lvl,rew_eval_lvl, 'x')
 plt.plot(lvl,rew_test_lvl, 'o')
 plt.xscale('log')
 plt.legend(['test','train'])
 plt.show()
+
 # %%
