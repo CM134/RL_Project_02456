@@ -7,8 +7,6 @@ import glob
 import imageio
 import numpy as np
 
-from train_baseline_config import Encoder,Policy
-
 #--------------------------------------
 feature_dim = 256
 envname = 'coinrun'
@@ -19,8 +17,8 @@ num_levels = 1000
 make_video = False
 vid_name = 'test'
 runs = 512  # runs per eval mode
-netname= 'reg'
-from train_baseline_regulated_config import Encoder,Policy
+netname= 'noLSTM'
+from train_IMPALAlarge_no_LSTM_config import Encoder,Policy
 dictnames = glob.glob('./state_dicts/*'+netname + '*')
 
 print(dictnames)
