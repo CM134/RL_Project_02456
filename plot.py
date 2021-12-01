@@ -196,7 +196,7 @@ IMP_noLSTM_rate_test = np.mean(np.array(IMP_noLSTM_rate_test), axis = 0)
 rate_eval = [PolicyDe_rate_eval, IMPlarge_rate_eval, IMPshort_rate_eval, baseline_rate_eval, baseline_reg_rate_eval, IMP_noLSTM_rate_eval]
 rate_test = [PolicyDe_rate_test, IMPlarge_rate_test, IMPshort_rate_test, baseline_rate_test, baseline_reg_rate_test, IMP_noLSTM_rate_test]
 
-rew_eval = [PolicyDe_rew_eval, IMPlarge_rew_eval, IMPshort_rew_eval, baseline_rew_eval, baseline_reg_rate_eval, IMP_noLSTM_rew_eval]
+rew_eval = [PolicyDe_rew_eval, IMPlarge_rew_eval, IMPshort_rew_eval, baseline_rew_eval, baseline_reg_rew_eval, IMP_noLSTM_rew_eval]
 rew_test = [PolicyDe_rew_test, IMPlarge_rew_test, IMPshort_rew_test, baseline_rew_test, baseline_reg_rew_test, IMP_noLSTM_rew_test]
 
 
