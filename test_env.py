@@ -122,3 +122,32 @@ plt.show()
   # frame = (torch.Tensor(eval_env.render(mode='rgb_array'))*255.).byte()
 
 # %%
+
+#%%
+num_envs = 32
+num_levels = 1000
+
+envname = 'coinrun'
+
+from utils import make_env, Storage, orthogonal_init
+
+"""Below cell can be used for policy evaluation and saves an episode to mp4 for you to view."""
+
+import matplotlib.pyplot as plt
+import torch
+import numpy as np
+
+
+# Make evaluation environment
+eval_env = make_env(num_envs, num_levels=num_levels, env_name = envname, seed=2, use_backgrounds=True)
+obs = eval_env.reset()
+
+frame = (torch.Tensor(eval_env.render(mode='rgb_array'))*255.).byte()
+# apply color changes to obs
+d0,d1,d2 = list(frame.size())
+torch_rand = torch.from_numpy(np.random.rand(d0,d1,d2)/2)
+frame = frame + torch_rand
+frame = frame/frame.max()
+frame = frame.type(torch.FloatTensor) # needs to be casted to fit weights
+plt.imshow(frame)
+# %%

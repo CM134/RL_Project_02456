@@ -164,6 +164,8 @@ for net in dictnames:
         if make_video == True:
             # Render environment and store
             frame = (torch.Tensor(eval_env.render(mode='rgb_array'))*255.).byte()
+            frame[:,:,0] = frame[:,:,0] + 255*0.75
+            frame = frame/frame.max()
             frames.append(frame)
 
 
@@ -258,6 +260,12 @@ for net in dictnames:
         if make_video == True:
             # Render environment and store
             frame = (torch.Tensor(eval_env.render(mode='rgb_array'))*255.).byte()
+            # apply color changes to obs
+            d0,d1,d2 = list(frame.size())
+            torch_rand = torch.from_numpy(np.random.rand(d0,d1,d2)/2)
+            frame = frame + torch_rand
+            frame = frame/frame.max()
+            frame = frame.type(torch.FloatTensor)
             frames.append(frame)
 
     mean_reward.append(torch.stack(total_reward).sum(0).mean(0).numpy())
