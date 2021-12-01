@@ -1,4 +1,4 @@
-9# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 
 """Hyperparameters. These values should be a good starting point. You can modify them later once you have a working implementation."""
 
@@ -94,6 +94,8 @@ class Encoder(nn.Module):
     #print(out.shape)
     
     return out.squeeze(0)
+
+
 
 class Policy(nn.Module):
   def __init__(self, encoder, feature_dim, num_actions):
