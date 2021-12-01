@@ -19,8 +19,8 @@ num_levels = 1000
 make_video = False
 vid_name = 'test'
 runs = 512  # runs per eval mode
-netname= 'policy'
-from train_PolicyD_config import Encoder,Policy
+netname= 'reg'
+from train_baseline_regulated_config import Encoder,Policy
 dictnames = glob.glob('./state_dicts/*'+netname + '*')
 
 print(dictnames)
