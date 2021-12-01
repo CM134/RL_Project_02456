@@ -105,10 +105,9 @@ print('Average return:', mean_reward)
 # print('Successful level:', level_success)
 print('Successful levels:', success_rate,'%')
 
-import numpy as np
-
-np.savetxt('./scores/' + netname + '_background_reward.csv', mean_reward, delimiter=', ', fmt = '% s')
-np.savetxt('./scores/' + netname + '_background_rate.csv', success_rate, delimiter=', ', fmt = '% s')
+if make_video == False:
+    np.savetxt('./scores/' + netname + '_background_reward.csv', mean_reward, delimiter=', ', fmt = '% s')
+    np.savetxt('./scores/' + netname + '_background_rate.csv', success_rate, delimiter=', ', fmt = '% s')
 
 #--------------------------------------------------------------------------------------------------
 # Change colors
@@ -194,10 +193,10 @@ print('Average return:', mean_reward)
 # print('Successful level:', level_success)
 print('Successful levels:', success_rate,'%')
 
-import numpy as np
 
-np.savetxt('./scores/' + netname + '_red_reward.csv', mean_reward, delimiter=', ', fmt = '% s')
-np.savetxt('./scores/' + netname + '_red_rate.csv', success_rate, delimiter=', ', fmt = '% s')
+if make_video == False:
+    np.savetxt('./scores/' + netname + '_red_reward.csv', mean_reward, delimiter=', ', fmt = '% s')
+    np.savetxt('./scores/' + netname + '_red_rate.csv', success_rate, delimiter=', ', fmt = '% s')
 
 #--------------------------------------------------------------------------------------------------
 #%% Random noise
@@ -262,10 +261,10 @@ for net in dictnames:
             frame = (torch.Tensor(eval_env.render(mode='rgb_array'))*255.).byte()
             # apply color changes to obs
             d0,d1,d2 = list(frame.size())
-            torch_rand = torch.from_numpy(np.random.rand(d0,d1,d2)/2)
-            frame = frame + torch_rand
-            frame = frame/frame.max()
-            frame = frame.type(torch.FloatTensor)
+            np_rand = (np.random.randint(low=0, high=255, size=(d0,d1,d2))/2)
+            frame = frame.numpy() + np_rand
+            frame = (frame/frame.max())*255
+            frame = frame.astype(np.uint8)
             frames.append(frame)
 
     mean_reward.append(torch.stack(total_reward).sum(0).mean(0).numpy())
@@ -281,7 +280,7 @@ for net in dictnames:
     
     if make_video == True:
         # Save frames as video
-        frames = torch.stack(frames)
+        frames = np.stack(frames)
         imageio.mimsave(('noise' + vid_name + '.mp4'), frames, fps=25)
         break
 
@@ -293,7 +292,6 @@ print('Average return:', mean_reward)
 # print('Successful level:', level_success)
 print('Successful levels:', success_rate,'%')
 
-import numpy as np
-
-np.savetxt('./scores/' + netname + '_noise_reward.csv', mean_reward, delimiter=', ', fmt = '% s')
-np.savetxt('./scores/' + netname + '_noise_rate.csv', success_rate, delimiter=', ', fmt = '% s')
+if make_video == False:
+    np.savetxt('./scores/' + netname + '_noise_reward.csv', mean_reward, delimiter=', ', fmt = '% s')
+    np.savetxt('./scores/' + netname + '_noise_rate.csv', success_rate, delimiter=', ', fmt = '% s')
