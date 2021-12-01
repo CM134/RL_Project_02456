@@ -11,11 +11,11 @@ import numpy as np
 feature_dim = 256
 envname = 'coinrun'
 
-num_envs = 32
+num_envs = 1
 num_levels = 1000
 
-make_video = False
-vid_name = 'test'
+make_video = True
+vid_name = 'noLSTM'
 runs = 512  # runs per eval mode
 netname= 'noLSTM'
 from train_IMPALAlarge_no_LSTM_config import Encoder,Policy
@@ -76,11 +76,6 @@ for net in dictnames:
             frame = (torch.Tensor(eval_env.render(mode='rgb_array'))*255.).byte()
             frames.append(frame)
     
-    if make_video == True:
-        # Save frames as video
-        frames = torch.stack(frames)
-        imageio.mimsave((vid_name + '.mp4'), frames, fps=25)
-
     mean_reward.append(torch.stack(total_reward).sum(0).mean(0).numpy())
     success_rate.append(level_success/levels_played * 100) 
 
@@ -91,6 +86,17 @@ for net in dictnames:
     level_success = 0
     levels_played = len(obs)
     total_reward = []
+
+    if make_video == True:
+        # Save frames as video
+        frames = torch.stack(frames)
+        imageio.mimsave(('background' + vid_name + '.mp4'), frames, fps=25)
+        frames = []
+        break
+
+
+
+
 
 print('Eval modus finished:')
 # Calculate average return
@@ -159,11 +165,7 @@ for net in dictnames:
             # Render environment and store
             frame = (torch.Tensor(eval_env.render(mode='rgb_array'))*255.).byte()
             frames.append(frame)
-    
-    if make_video == True:
-        # Save frames as video
-        frames = torch.stack(frames)
-        imageio.mimsave((vid_name + '.mp4'), frames, fps=25)
+
 
     mean_reward.append(torch.stack(total_reward).sum(0).mean(0).numpy())
     success_rate.append(level_success/levels_played * 100) 
@@ -175,6 +177,13 @@ for net in dictnames:
     level_success = 0
     levels_played = len(obs)
     total_reward = []
+    
+    if make_video == True:
+        # Save frames as video
+        frames = torch.stack(frames)
+        imageio.mimsave(('red' + vid_name + '.mp4'), frames, fps=25)
+        break
+
 
 print('Eval modus finished:')
 # Calculate average return
@@ -250,11 +259,6 @@ for net in dictnames:
             # Render environment and store
             frame = (torch.Tensor(eval_env.render(mode='rgb_array'))*255.).byte()
             frames.append(frame)
-    
-    if make_video == True:
-        # Save frames as video
-        frames = torch.stack(frames)
-        imageio.mimsave((vid_name + '.mp4'), frames, fps=25)
 
     mean_reward.append(torch.stack(total_reward).sum(0).mean(0).numpy())
     success_rate.append(level_success/levels_played * 100) 
@@ -266,6 +270,13 @@ for net in dictnames:
     level_success = 0
     levels_played = len(obs)
     total_reward = []
+    
+    if make_video == True:
+        # Save frames as video
+        frames = torch.stack(frames)
+        imageio.mimsave(('noise' + vid_name + '.mp4'), frames, fps=25)
+        break
+
 
 print('Eval modus finished:')
 # Calculate average return
