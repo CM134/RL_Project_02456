@@ -1,0 +1,57 @@
+Error:  [Errno 2] No such file or directory: 'config/conf_IMPlarge_noLSTM.json'
+loading form config failed: using default
+Start Training...
+Step: 8192
+Mean test reward: 0.9375
+Mean eval reward: 0.9375
+Successful test levels: 60.0 %
+Successful eval levels: 33.33333333333333 %
+Step: 16384
+Mean test reward: 4.0625
+Mean eval reward: 0.625
+Successful test levels: 76.47058823529412 %
+Successful eval levels: 33.33333333333333 %
+Step: 24576
+Mean test reward: 2.5
+Mean eval reward: 0.625
+Successful test levels: 57.14285714285714 %
+Successful eval levels: 12.5 %
+Completed training!
+Error:  [Errno 2] No such file or directory: 'config/conf_IMPlarge_noLSTM.json'
+loading form config failed: using default
+Start Training...
+Step: 8192
+Mean test reward: 0.9375
+Mean eval reward: 0.9375
+Successful test levels: 60.0 %
+Successful eval levels: 33.33333333333333 %
+Step: 16384
+Mean test reward: 4.0625
+Mean eval reward: 0.625
+Successful test levels: 76.47058823529412 %
+Successful eval levels: 33.33333333333333 %
+Step: 24576
+Mean test reward: 2.5
+Mean eval reward: 0.625
+Successful test levels: 57.14285714285714 %
+Successful eval levels: 12.5 %
+Completed training!
+Error:  [Errno 2] No such file or directory: 'config/conf_IMPlarge_noLSTM.json'
+loading form config failed: using default
+Start Training...
+Step: 8192
+Mean test reward: 0.9375
+Mean eval reward: 0.9375
+Successful test levels: 60.0 %
+Successful eval levels: 33.33333333333333 %
+Step: 16384
+Mean test reward: 4.0625
+Mean eval reward: 0.625
+Successful test levels: 76.47058823529412 %
+Successful eval levels: 33.33333333333333 %
+Step: 24576
+Mean test reward: 2.5
+Mean eval reward: 0.625
+Successful test levels: 57.14285714285714 %
+Successful eval levels: 12.5 %
+Completed training!
