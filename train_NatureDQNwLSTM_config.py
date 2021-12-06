@@ -96,7 +96,7 @@ class EncoderNatureDQN(nn.Module):
     return out.squeeze(0)
   
   
-  class Encoder(nn.Module):
+class Encoder(nn.Module):
   def __init__(self, in_channels, feature_dim):
     super().__init__()
     self.layers = nn.Sequential(
