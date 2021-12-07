@@ -18,7 +18,30 @@ eval_env = make_env(num_envs, num_levels=num_levels, env_name = envname, seed=2,
 obs = eval_env.reset()
 plt.imshow(obs[0].permute(1,2,0)) 
 plt.show()
-# -------
+#%% -------
+
+def drop_frame(p=0):
+    n = int(p*100)
+    X = np.random.randint(0, 100,(64,64))
+    X[X<n] = 0
+    X[X>=n] = 1
+    X_ = np.repeat(np.repeat(X,8, axis=0),8, axis=1)
+    X_ = np.expand_dims(X_,-1)
+    return X, X_   
+
+drop = [0.25, 0.5, 1]
+
+
+for drop_rate in drop:
+  obs = eval_env.reset()
+  X_64, X_512 = drop_frame(drop_rate)
+  obs = obs*torch.tensor(X_64)
+  plt.imshow(obs[0].permute(1,2,0)) 
+  plt.show()
+
+
+
+#%%
 # red in torch
 obs = eval_env.reset()
 plt.imshow(obs[0].permute(1,2,0)) 
