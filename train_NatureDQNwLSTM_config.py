@@ -104,15 +104,16 @@ class Encoder(nn.Module):
         nn.Conv2d(in_channels=32, out_channels=64, kernel_size=4, stride=2), nn.ReLU(),
         nn.Conv2d(in_channels=64, out_channels=64, kernel_size=3, stride=1), nn.ReLU(),
         Flatten(),
-        nn.Linear(in_features=1024, out_features=feature_dim), nn.ReLU(),
-        Flatten(),
-        nn.LSTM(input_size=feature_dim, hidden_size=feature_dim, num_layers=1)
+        nn.Linear(in_features=1024, out_features=feature_dim), nn.ReLU()
     )
+    self.lstm = nn.LSTM(input_size=feature_dim, hidden_size=feature_dim, num_layers=1)
     self.apply(orthogonal_init)
 
   def forward(self, x):
-    return self.layers(x)
-
+    out = self.layers(x)
+    out = out.view(1,out.shape[0],out.shape[1])
+    out,(h_n, c_n) = self.lstm(out)
+    return out.squeeze(0)
 
 
 class Policy(nn.Module):

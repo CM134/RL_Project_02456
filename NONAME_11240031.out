@@ -1,0 +1,38 @@
+/bin/bash: ./job_NatureDQNwLSTM.sh: Permission denied
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@hpc.dtu.dk>
+Subject: Job 11240031: <NONAME> in cluster <dcc> Exited
+
+Job <NONAME> was submitted from host <gbarlogin2> by user <s202460> in cluster <dcc> at Mon Dec  6 16:41:23 2021
+Job was executed on host(s) <n-62-11-69>, in queue <hpc>, as user <s202460> in cluster <dcc> at Mon Dec  6 16:41:24 2021
+</zhome/0c/3/149896> was used as the home directory.
+</zhome/0c/3/149896/cm_Workspace> was used as the working directory.
+Started at Mon Dec  6 16:41:24 2021
+Terminated at Mon Dec  6 16:41:24 2021
+Results reported at Mon Dec  6 16:41:24 2021
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+job_NatureDQNwLSTM.sh
+------------------------------------------------------------
+
+Exited with exit code 126.
+
+Resource usage summary:
+
+    CPU time :                                   0.23 sec.
+    Max Memory :                                 -
+    Average Memory :                             -
+    Total Requested Memory :                     1024.00 MB
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              -
+    Max Threads :                                -
+    Run time :                                   7 sec.
+    Turnaround time :                            1 sec.
+
+The output (if any) is above this job summary.
+
