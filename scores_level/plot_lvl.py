@@ -5,6 +5,7 @@ import numpy as np
 
 from os import listdir
 from os.path import isfile, join
+import matplotlib.pyplot as plt
 
 import glob
 
@@ -57,35 +58,35 @@ print(name)
 
 
 #%% Plot
-import matplotlib.pyplot as plt
-# if we have several runs we could do the following: https://stackoverflow.com/questions/12957582/plot-yerr-xerr-as-shaded-region-rather-than-error-bars
+# import matplotlib.pyplot as plt
+# # if we have several runs we could do the following: https://stackoverflow.com/questions/12957582/plot-yerr-xerr-as-shaded-region-rather-than-error-bars
 
-# clr = ['orange','steelblue','mediumseagreen','crimson']
-plt.figure()
-for i in range(len(rate_eval)):
-    plt.plot(steps, rate_eval[i])
+# # clr = ['orange','steelblue','mediumseagreen','crimson']
+# plt.figure()
+# for i in range(len(rate_eval)):
+#     plt.plot(steps, rate_eval[i])
 
-plt.legend(name)
-# clr = ['orange','steelblue','mediumseagreen','crimson']
-for i in range(len(rate_test)):
-    plt.plot(steps, rate_test[i], linestyle='--')
-plt.grid(True)
-plt.xlim([0,2.5e6])
-plt.show()
+# plt.legend(name)
+# # clr = ['orange','steelblue','mediumseagreen','crimson']
+# for i in range(len(rate_test)):
+#     plt.plot(steps, rate_test[i], linestyle='--')
+# plt.grid(True)
+# plt.xlim([0,2.5e6])
+# plt.show()
 
 
-# clr = ['orange','steelblue','mediumseagreen','crimson']
-plt.figure()
-for i in range(len(rew_eval)):
-    plt.plot(steps, rew_eval[i] )
+# # clr = ['orange','steelblue','mediumseagreen','crimson']
+# plt.figure()
+# for i in range(len(rew_eval)):
+#     plt.plot(steps, rew_eval[i] )
 
-plt.legend(name)
-# clr = ['orange','steelblue','mediumseagreen','crimson']
-for i in range(len(rew_test)):
-    plt.plot(steps, rew_test[i], linestyle='--')
-plt.grid(True)
-plt.xlim([0,2.5e6])
-plt.show()
+# plt.legend(name)
+# # clr = ['orange','steelblue','mediumseagreen','crimson']
+# for i in range(len(rew_test)):
+#     plt.plot(steps, rew_test[i], linestyle='--')
+# plt.grid(True)
+# plt.xlim([0,2.5e6])
+# plt.show()
 
 
 # %%
