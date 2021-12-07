@@ -15,11 +15,11 @@ num_envs = 16
 num_levels = 1000
 
 make_video = False
-vid_name = 'NatureDQNwLSTM'
+vid_name = 'VIDEO'
 runs = 512  # runs per eval mode
 
-netname= 'NatureDQNwLSTM'
-from train_NatureDQNwLSTM_config import Encoder,Policy
+netname= 'base_reg'
+from train_baseline_regulated_config import Encoder,Policy
 
 dictnames = glob.glob('./state_dicts/*'+netname + '*')
 print(dictnames)
