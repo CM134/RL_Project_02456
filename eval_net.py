@@ -187,8 +187,8 @@ print(dictnames)
 # print('Successful levels:', success_rate,'%')
 
 # if make_video == False:
-#     np.savetxt('./scores/' + netname + '_background_reward.csv', mean_reward, delimiter=', ', fmt = '% s')
-#     np.savetxt('./scores/' + netname + '_background_rate.csv', success_rate, delimiter=', ', fmt = '% s')
+#     np.savetxt('./scores/' + netname + '_background_True_reward.csv', mean_reward, delimiter=', ', fmt = '% s')
+#     np.savetxt('./scores/' + netname + '_background_True_rate.csv', success_rate, delimiter=', ', fmt = '% s')
 
 # #--------------------------------------------------------------------------------------------------
 # # Change colors
