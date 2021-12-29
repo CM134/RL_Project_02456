@@ -390,12 +390,12 @@ plt.show()
 
 # All the data
 rate_eval = [IMPlarge_rate_eval, IMP_noLSTM_rate_eval]
-rate_test = [PolicyDe_rate_test, IMPlarge_rate_test]
+rate_test = [IMPlarge_rate_test, IMP_noLSTM_rate_test]
 
 rew_eval = [IMPlarge_rew_eval, IMP_noLSTM_rew_eval]
 rew_test = [IMPlarge_rew_test, IMP_noLSTM_rew_test]
 
-name = ['IMPALA-LARGE w. LSTM', 'IMPALA-LARGE no LSTM']
+name = ['IMPALA w. LSTM', 'IMPALA no LSTM']
 
 
 
@@ -466,7 +466,7 @@ for i in range(len(rate_eval)):
     
     
 #Plot
-clr = ['limegreen','orange','blue','darkred']
+clr = ['limegreen','red','blue','darkred']
 plt.figure()
 for i in range(len(rate_eval)):
     plt.plot(steps_mov, rate_eval[i] , clr[i])
@@ -497,4 +497,8 @@ plt.xlabel('Steps')
 plt.ylabel('Reward')
 plt.savefig('Plots/IMPALAvsDQN_reward.png')
 plt.show()
+# %%
+
+# %%
+
 # %%
